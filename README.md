@@ -69,21 +69,8 @@ The page will reload if you make edits.
 Open the project folder and Navigate to `/src/components/`. <br/>
 You will find all the components used and you can edit your information accordingly.
 
-### Show your support
+## Show Your Support
 
-Give a ⭐ if you like this website!
+If you like my work, consider buying me a coffee!
 
-<a href="https://www.buymeacoffee.com/Dakster" target="_blank">
-    <img src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" 
-         data-name="bmc-button" 
-         data-slug="Dakster" 
-         data-color="#FFDD00" 
-         data-emoji="" 
-         data-font="Cookie" 
-         data-text="Buy me a coffee" 
-         data-outline-color="#000000" 
-         data-font-color="#000000" 
-         data-coffee-color="#ffffff" 
-         alt="Buy Me A Coffee" 
-    >
-</a>
+[![Buy Me a Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-violet.png)](https://buymeacoffee.com/Dakster)
