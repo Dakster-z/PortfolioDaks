@@ -7,6 +7,11 @@ import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
+import grilli from "../../Assets/Projects/grilli.png";
+import glowing from "../../Assets/Projects/glowing.png";
+import oblawf from "../../Assets/Projects/oblawf.png";
+import sushi from "../../Assets/Projects/sushi.png";
+
 
 function Projects() {
   return (
@@ -22,58 +27,48 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={grilli}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Grilli"
+              description="Grilli is a dynamic showcase website designed for a grill restaurant. The site highlights the restaurant's mouth-watering dishes, featuring high-quality visuals and an intuitive layout.The site emphasizes user-friendly navigation and responsiveness, allowing customers to browse the menu, explore the restaurant’s story, and easily make reservations online"
+              ghLink="https://github.com/Dakster-z/grilli"
+              demoLink=""
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={glowing}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Glowing"
+              description="Glowing is a modern e-commerce platform built for selling cosmetic products. With an elegant and clean design, the website provides a seamless shopping experience. It features an easy-to-navigate product catalog, secure checkout, and responsive design for all devices. Glowing integrates efficient filtering and search options to help customers find their desired beauty products quickly."
+              ghLink=""
+              demoLink=""
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={oblawf}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="O&B Law Firm"
+              description="O&B Law Firm is a professional website designed to represent a law firm’s services. The site features a clean and sophisticated design with easy navigation, allowing visitors to explore the firm's areas of expertise, team profiles, and legal resources. It includes a contact form for inquiries and showcases testimonials to build trust with potential clients. The website is fully responsive, ensuring an optimal experience across all devices."
+              ghLink="https://github.com/Dakster-z/O-B-Lawfirm"
+              demoLink="o&blawfirm.com"              
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={sushi}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Daks Sushi"
+              description="Daks Sushi is a vibrant and visually appealing website created for a sushi restaurant. With a sleek design that captures the essence of Japanese cuisine, the site allows customers to browse the sushi menu, explore special offers, and make reservations. Daks Sushi is optimized for mobile devices, ensuring a smooth user experience for ordering and discovering the restaurant’s offerings on the go."
+              ghLink="https://github.com/Dakster-z/sushi"
+              demoLink=""
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
         </Row>
       </Container>
     </Container>
