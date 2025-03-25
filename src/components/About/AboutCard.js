@@ -10,9 +10,6 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">DAKIR Zaid </span>
             from <span className="purple"> Casablanca, Morrocoo.</span>
-            <br />
-            I am currently employed as a software developer at Juspay.
-            <br />
             I have experience working in dynamic environments, contributing to web applications using modern front-end and back-end technologies. 
             <br />
             I am passionate about crafting efficient solutions and collaborating within agile, multidisciplinary teams.
