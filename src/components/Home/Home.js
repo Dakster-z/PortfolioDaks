@@ -86,7 +86,7 @@ function Home() {
                 borderRadius: "10px" 
               }}>
                 <h3 style={{ color: "#c770f0", marginBottom: 15 }}>Ready to build intelligent web applications?</h3>
-                <p style={{ marginBottom: 20 }}>📧 dakir.zaid@example.com | 🌍 Based in Morocco, serving global clients</p>
+                <p style={{ marginBottom: 20 }}>📧zaid.dakengineer@gmail.com | 🌍 Based in Morocco, serving global clients</p>
                 <button 
                   className="btn btn-primary"
                   style={{ 
