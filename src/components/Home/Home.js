@@ -78,7 +78,51 @@ function Home() {
                   <p>Workflow optimization, API integrations, Process automation</p>
                 </div>
               </div>
-
+<div
+  style={{
+    textAlign: "center",
+    padding: "24px",
+    backgroundColor: "rgba(199, 112, 240, 0.08)",
+    borderRadius: "12px",
+    marginBottom: "32px",
+    boxShadow: "0 2px 8px rgba(199,112,240,0.07)"
+  }}
+>
+  <h2 style={{ color: "#c770f0", marginBottom: 10 }}>
+    🎯 AI Automation & Web Development Specialist
+  </h2>
+  <h4 style={{ marginBottom: 22 }}>
+    Helping businesses save <span style={{ color: "#c770f0" }}>$10K+</span> annually through custom automation
+  </h4>
+  <div
+    style={{
+      background: "#fff",
+      border: "1px solid #c770f0",
+      borderRadius: "10px",
+      display: "inline-block",
+      textAlign: "left",
+      padding: "20px 30px",
+      marginBottom: "15px",
+      boxShadow: "0 2px 8px rgba(199,112,240,0.07)"
+    }}
+  >
+    <h5 style={{ color: "#c770f0", marginBottom: 12 }}>💼 Service Packages</h5>
+    <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+      <li style={{ marginBottom: 8 }}>
+        <strong>AI Chatbot Integration</strong> <span style={{ color: "#888" }}>($2,000–$5,000)</span>
+      </li>
+      <li style={{ marginBottom: 8 }}>
+        <strong>Business Process Automation</strong> <span style={{ color: "#888" }}>($3,000–$8,000)</span>
+      </li>
+      <li style={{ marginBottom: 8 }}>
+        <strong>Custom Web Applications</strong> <span style={{ color: "#888" }}>($5,000–$15,000)</span>
+      </li>
+      <li>
+        <strong>E-commerce Solutions</strong> <span style={{ color: "#888" }}>($4,000–$12,000)</span>
+      </li>
+    </ul>
+  </div>
+</div>
               <div className="cta" style={{ 
                 textAlign: "center", 
                 padding: "20px", 

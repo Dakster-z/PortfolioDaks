@@ -7,7 +7,7 @@ function AboutCard() {
       <Card.Body>
         <h2>About Me</h2>
         <p>
-          Hi, I'm <span className="purple">Zaid Dakir</span> - a full-stack developer who specializes in integrating AI capabilities into web applications.
+          Hi, I'm <span className="purple">Daksster</span> - a full-stack developer who specializes in integrating AI capabilities into web applications.
         </p>
         <p>
           Over the past 5 years, I've built everything from simple websites to complex web applications.
