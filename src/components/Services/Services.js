@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Card, Badge } from "react-bootstrap";
-import { servicePackages } from "../../data/service";
+import { servicePackages } from '../../data/services.js';
 import Particle from "../Particle";
+import './Services.css';
 
 function Services() {
   return (
