@@ -1,245 +1,189 @@
-/* Bootstrap-compatible Services CSS */
-.services-section {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white !important;
+/* Services Component - PortfolioDaks Compatible */
+/* Respecte les instructions Copilot : React Bootstrap + cohérence du portfolio */
+
+/* Section principale - utilise les classes du portfolio existant */
+.project-section {
+  background-image: var(--section-background-color) !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
 }
 
-.services-section .container-fluid {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+/* Cards Services - cohérent avec project-card-view */
+.project-card-view {
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  color: white !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(200, 137, 230, 0.137) !important;
+  transition: all 0.3s ease 0s !important;
+  height: 100% !important;
 }
 
-.services-header {
-    text-align: center;
-    margin-bottom: 60px;
+.project-card-view:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(197, 115, 230, 0.883) !important;
 }
 
-.services-header h2 {
-    font-size: 3rem;
+/* Titre Services - cohérent avec project-heading */
+.project-heading {
+  color: white !important;
+  font-weight: bold !important;
+  padding-bottom: 20px !important;
+  text-align: center !important;
+}
+
+.project-heading .purple {
+  color: #c770f0 !important;
+}
+
+/* Badge populaire - utilise la couleur principale du portfolio */
+.service-popular-badge {
+  background-color: #c770f0 !important;
+  color: white !important;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Prix - utilise la couleur principale du portfolio */
+.service-price {
+  color: #c770f0 !important;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.service-original-price {
+  color: #888 !important;
+  text-decoration: line-through;
+  font-size: 1.2em;
+}
+
+/* Timeline - style cohérent */
+.service-timeline {
+  color: #c770f0 !important;
+  font-weight: 500;
+}
+
+/* Features et tech stack */
+.service-features h6,
+.service-tech h6 {
+  color: #c770f0 !important;
+  margin-bottom: 8px;
+}
+
+.service-features ul {
+  padding-left: 20px;
+  font-size: 0.9em;
+}
+
+.service-features li {
+  margin-bottom: 4px;
+  color: white;
+}
+
+/* Tech badges - cohérents avec le thème */
+.service-tech-badge {
+  background-color: rgba(199, 112, 240, 0.2) !important;
+  color: #c770f0 !important;
+  border: 1px solid #c770f0 !important;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  margin: 2px;
+}
+
+/* Boutons - cohérents avec le style du portfolio */
+.btn-primary.service-btn {
+  background-color: #c770f0 !important;
+  border-color: #c770f0 !important;
+  padding: 10px 25px;
+  font-size: 1em;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary.service-btn:hover {
+  background-color: #a855f7 !important;
+  border-color: #a855f7 !important;
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary.service-btn {
+  color: #c770f0 !important;
+  border-color: #c770f0 !important;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.btn-outline-primary.service-btn:hover {
+  background-color: #c770f0 !important;
+  border-color: #c770f0 !important;
+  color: white !important;
+}
+
+/* Section custom - cohérente avec le design */
+.services-custom-section {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.services-custom-section h3 {
+  color: #c770f0 !important;
+  margin-bottom: 15px;
+}
+
+.services-custom-section p {
+  color: white !important;
+  margin-bottom: 20px;
+}
+
+/* Responsive - respecte les conventions du portfolio */
+@media (max-width: 767px) {
+  .project-section {
+    padding-top: 120px !important;
+  }
+  
+  .project-card-view {
     margin-bottom: 20px;
-    font-weight: 700;
-    color: white !important;
+  }
+  
+  .service-price {
+    font-size: 1.5em !important;
+  }
+  
+  .service-original-price {
+    font-size: 1em !important;
+  }
 }
 
-.services-header p {
-    font-size: 1.3rem;
-    opacity: 0.9;
-    color: white !important;
+/* Animations - cohérentes avec le portfolio */
+.project-card {
+  transition: all 0.3s ease-in-out !important;
+}
+.project-card:hover {
+  filter: brightness(1.1) !important;
 }
 
+/* Text colors - cohérence globale */
+.service-description,
+.service-text {
+  color: white !important;
+  text-align: justify;
+}
+
+/* Grid layout - compatible Bootstrap */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-/* Override Bootstrap card styles */
-.service-card {
-    background: rgba(255, 255, 255, 0.1) !important;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 20px !important;
-    padding: 40px 30px !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    color: white !important;
-    box-shadow: none !important;
-}
-
-.service-card:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
-}
-
-.service-card.popular {
-    border: 2px solid #ffd700 !important;
-    transform: scale(1.05);
-}
-
-.popular-badge {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ffd700 !important;
-    color: #333 !important;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    z-index: 10;
-}
-
-.service-header h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #ffd700 !important;
-    font-weight: bold;
-}
-
-.price-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-.price {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #fff !important;
-}
-
-.original-price {
-    font-size: 1.5rem;
-    text-decoration: line-through;
-    opacity: 0.6;
-    color: #fff !important;
-}
-
-.timeline {
-    background: rgba(255, 255, 255, 0.2) !important;
-    padding: 8px 15px;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    display: inline-block;
-    margin-bottom: 20px;
-    color: white !important;
-    border: none !important;
-}
-
-.service-description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    opacity: 0.9;
-    color: white !important;
-}
-
-.features-list h4 {
-    color: #ffd700 !important;
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.features-list ul {
-    list-style: none !important;
-    padding: 0 !important;
-    margin-bottom: 30px;
-}
-
-.features-list li {
-    padding: 8px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white !important;
-}
-
-.checkmark {
-    color: #4ade80 !important;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.tech-stack h4 {
-    color: #ffd700 !important;
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.tech-tag {
-    background: rgba(255, 255, 255, 0.2) !important;
-    padding: 6px 12px;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    color: white !important;
-}
-
-/* Override Bootstrap button styles */
-.get-quote-btn {
-    width: 100% !important;
-    padding: 15px !important;
-    background: linear-gradient(45deg, #ffd700, #ffed4e) !important;
-    color: #333 !important;
-    border: none !important;
-    border-radius: 10px !important;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none !important;
-}
-
-.get-quote-btn:hover {
-    background: linear-gradient(45deg, #ffed4e, #ffd700) !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3) !important;
-    color: #333 !important;
-}
-
-.services-footer {
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 40px;
-}
-
-.services-footer p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    opacity: 0.9;
-    color: white !important;
-}
-
-.payment-info {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.payment-info span {
-    background: rgba(255, 255, 255, 0.1) !important;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: white !important;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .service-card.popular {
-        transform: none;
-    }
-    
-    .services-header h2 {
-        font-size: 2rem;
-    }
-    
-    .payment-info {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .price {
-        font-size: 2rem !important;
-    }
+  justify-content: center;
+  padding-bottom: 10px;
 }
