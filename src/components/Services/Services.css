@@ -1,218 +1,245 @@
+/* Bootstrap-compatible Services CSS */
 .services-section {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.services-section .container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .services-header {
-  text-align: center;
-  margin-bottom: 60px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .services-header h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: white !important;
 }
 
 .services-header p {
-  font-size: 1.3rem;
-  opacity: 0.9;
+    font-size: 1.3rem;
+    opacity: 0.9;
+    color: white !important;
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
 }
 
+/* Override Bootstrap card styles */
 .service-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 40px 30px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+    background: rgba(255, 255, 255, 0.1) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 20px !important;
+    padding: 40px 30px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    color: white !important;
+    box-shadow: none !important;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
 }
 
 .service-card.popular {
-  border: 2px solid #ffd700;
-  transform: scale(1.05);
+    border: 2px solid #ffd700 !important;
+    transform: scale(1.05);
 }
 
 .popular-badge {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ffd700;
-  color: #333;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 0.9rem;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffd700 !important;
+    color: #333 !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    z-index: 10;
 }
 
 .service-header h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #ffd700;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffd700 !important;
+    font-weight: bold;
 }
 
 .price-container {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
 }
 
 .price {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff !important;
 }
 
 .original-price {
-  font-size: 1.5rem;
-  text-decoration: line-through;
-  opacity: 0.6;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: #fff !important;
 }
 
 .timeline {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 15px;
-  border-radius: 15px;
-  font-size: 0.9rem;
-  display: inline-block;
-  margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.2) !important;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: white !important;
+    border: none !important;
 }
 
 .service-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  opacity: 0.9;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    color: white !important;
 }
 
 .features-list h4 {
-  color: #ffd700;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
+    color: #ffd700 !important;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .features-list ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 30px;
+    list-style: none !important;
+    padding: 0 !important;
+    margin-bottom: 30px;
 }
 
 .features-list li {
-  padding: 8px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white !important;
 }
 
 .checkmark {
-  color: #4ade80;
-  font-weight: bold;
-  font-size: 1.2rem;
+    color: #4ade80 !important;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .tech-stack h4 {
-  color: #ffd700;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
+    color: #ffd700 !important;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
 .tech-tag {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 6px 12px;
-  border-radius: 15px;
-  font-size: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2) !important;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
 }
 
+/* Override Bootstrap button styles */
 .get-quote-btn {
-  width: 100%;
-  padding: 15px;
-  background: linear-gradient(45deg, #ffd700, #ffed4e);
-  color: #333;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    width: 100% !important;
+    padding: 15px !important;
+    background: linear-gradient(45deg, #ffd700, #ffed4e) !important;
+    color: #333 !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
 }
 
 .get-quote-btn:hover {
-  background: linear-gradient(45deg, #ffed4e, #ffd700);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    background: linear-gradient(45deg, #ffed4e, #ffd700) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3) !important;
+    color: #333 !important;
 }
 
 .services-footer {
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 40px;
 }
 
 .services-footer p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  opacity: 0.9;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    color: white !important;
 }
 
 .payment-info {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .payment-info span {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.1) !important;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: white !important;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .service-card.popular {
-    transform: none;
-  }
-  
-  .services-header h2 {
-    font-size: 2rem;
-  }
-  
-  .payment-info {
-    flex-direction: column;
-    align-items: center;
-  }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card.popular {
+        transform: none;
+    }
+    
+    .services-header h2 {
+        font-size: 2rem;
+    }
+    
+    .payment-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .price {
+        font-size: 2rem !important;
+    }
 }
