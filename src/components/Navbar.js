@@ -14,6 +14,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { AiOutlineCustomerService } from "react-icons/ai";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -29,6 +30,8 @@ function NavBar() {
 
   window.addEventListener("scroll", scrollHandler);
 
+  // Import the missing icon for Services
+
   return (
     <Navbar
       expanded={expand}
@@ -38,12 +41,12 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-        <img 
-    src={logo} 
-    className="img-fluid logo" 
-    alt="brand" 
-    style={{ width: "600px", height: "auto" }}  // Fixed width, automatic height to keep aspect ratio
-  />
+          <img
+            src={logo}
+            className="img-fluid logo"
+            alt="brand"
+            style={{ width: "600px", height: "auto" }}
+          />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -86,10 +89,9 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-             <Nav.Item>
-              <Nav.Link
-                 as={Link} to="/services">
-  Services
+            <Nav.Item>
+              <Nav.Link as={Link} to="/services" onClick={() => updateExpanded(false)}>
+                <AiOutlineCustomerService style={{ marginBottom: "2px" }} /> Services
               </Nav.Link>
             </Nav.Item>
 
