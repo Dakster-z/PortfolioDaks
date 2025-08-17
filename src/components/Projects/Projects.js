@@ -6,6 +6,7 @@ import grilli from "../../Assets/Projects/grilli.png";
 import glowing from "../../Assets/Projects/glowing.png";
 import oblawf from "../../Assets/Projects/oblawf.png";
 import sushi from "../../Assets/Projects/sushi.png";
+import mockupai from "../../Assets/Projects/mockupai.png";
 
 
 function Projects() {
@@ -33,10 +34,12 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={glowing}
+              imgPath={mockupai}
               isBlog={false}
-              title="Glowing"
-              description="Glowing is a modern e-commerce platform built for selling cosmetic products. With an elegant and clean design, the website provides a seamless shopping experience. It features an easy-to-navigate product catalog, secure checkout, and responsive design for all devices. Glowing integrates efficient filtering and search options to help customers find their desired beauty products quickly."
+              title="AI Chatbot pour e-commerce"
+              description="Une boutique en ligne avait trop de demandes clients (livraison, retours, produits).
+              Solution : Chatbot IA intégré 24/7 capable de répondre aux FAQ, suivre les commandes et rediriger vers le support si nécessaire.
+              Stack : OpenAI API, Node.js, React, Firebase."
               ghLink=""
               demoLink=""
             />
@@ -60,6 +63,30 @@ function Projects() {
               title="Daks Sushi"
               description="Daks Sushi is a vibrant and visually appealing website created for a sushi restaurant. With a sleek design that captures the essence of Japanese cuisine, the site allows customers to browse the sushi menu, explore special offers, and make reservations. Daks Sushi is optimized for mobile devices, ensuring a smooth user experience for ordering and discovering the restaurant’s offerings on the go."
               ghLink="https://github.com/Dakster-z/sushi"
+              demoLink=""
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={glowing}
+              isBlog={false}
+              title="TaskAutomator"
+              description="Une PME voulait automatiser son suivi de tâches et générer des rapports.
+Solution : Application web avec espace admin, gestion de tâches, intégrations API (Slack/Email)."
+              ghLink=""
+              demoLink=""
+            />
+          </Col>
+        
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={sushi}
+              isBlog={false}
+              title="CoachFlow"
+              description="Contexte : Un coach voulait centraliser ses demandes de rdv + suivi clients.
+Solution : Site vitrine avec formulaire automatisé → email + CRM + Google Calendar."
+              ghLink=""
               demoLink=""
             />
           </Col>

@@ -21,13 +21,12 @@ function Home() {
               </h1>
 
               <h1 className="heading-name">
-                Specializing in
-                <strong className="main-name"> AI Integration</strong>
+                "Boostez votre business avec 
+                <strong className="main-name"> des solutions web & IA sur-mesure"</strong>
               </h1>
 
               <h2 className="heading-subtitle" style={{ fontSize: "1.8em", color: "#c770f0", marginBottom: 30 }}>
-                Building Intelligent Web Applications with Modern Technology
-              </h2>
+Création d’applications intelligentes qui automatisent, prédisent et font gagner du temps.              </h2>
 
               <p className="home-description" style={{ 
                 fontSize: "1.2em", 
@@ -35,8 +34,7 @@ function Home() {
                 marginBottom: 40,
                 textAlign: "left"
               }}>
-                I create web applications that leverage AI capabilities to solve real business problems. 
-                Combining 5+ years of development experience with cutting-edge AI integration.
+                +5 ans d’expertise en développement full-stack & intégration IA de pointe.
               </p>
 
               <div className="skills-grid" style={{ 
@@ -52,8 +50,8 @@ function Home() {
                   textAlign: "center"
                 }}>
                   <span className="icon" style={{ fontSize: "2em" }}>🤖</span>
-                  <h3 style={{ color: "#c770f0", marginBottom: 10 }}>AI Integration</h3>
-                  <p>OpenAI API, ChatGPT, Claude, Custom AI Solutions</p>
+                  <h3 style={{ color: "#c770f0", marginBottom: 10 }}>IA sur mesure</h3>
+                  <p>Chatbots intelligents, analyse prédictive, assistants automatisés.</p>
                 </div>
                 
                 <div className="skill" style={{ 
@@ -63,8 +61,8 @@ function Home() {
                   textAlign: "center"
                 }}>
                   <span className="icon" style={{ fontSize: "2em" }}>💻</span>
-                  <h3 style={{ color: "#c770f0", marginBottom: 10 }}>Full-Stack Development</h3>
-                  <p>React, Node.js, Python, MongoDB, PostgreSQL</p>
+                  <h3 style={{ color: "#c770f0", marginBottom: 10 }}>Développement Web Premium</h3>
+                  <p>Sites ultra-rapides et personnalisés pour vos objectifs.</p>
                 </div>
                 
                 <div className="skill" style={{ 
@@ -74,8 +72,8 @@ function Home() {
                   textAlign: "center"
                 }}>
                   <span className="icon" style={{ fontSize: "2em" }}>🚀</span>
-                  <h3 style={{ color: "#c770f0", marginBottom: 10 }}>Business Automation</h3>
-                  <p>Workflow optimization, API integrations, Process automation</p>
+                  <h3 style={{ color: "#c770f0", marginBottom: 10 }}>Automatisation Business</h3>
+                  <p>Gagnez du temps avec des workflows intelligents et API connectées.</p>
                 </div>
               </div>
 <div
@@ -109,13 +107,13 @@ function Home() {
     <h5 style={{ color: "#c770f0", marginBottom: 12 }}>💼 Service Packages</h5>
     <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
       <li style={{ marginBottom: 8 }}>
-        <strong>AI Chatbot Integration</strong> <span style={{ color: "#888" }}>($2,000–$5,000)</span>
+        <strong>IA sur mesure</strong> <span style={{ color: "#888" }}>($2,000–$5,000)</span>
       </li>
       <li style={{ marginBottom: 8 }}>
         <strong>Business Process Automation</strong> <span style={{ color: "#888" }}>($3,000–$8,000)</span>
       </li>
       <li style={{ marginBottom: 8 }}>
-        <strong>Custom Web Applications</strong> <span style={{ color: "#888" }}>($5,000–$15,000)</span>
+        <strong>Développement Web Premium</strong> <span style={{ color: "#888" }}>($5,000–$15,000)</span>
       </li>
       <li>
         <strong>E-commerce Solutions</strong> <span style={{ color: "#888" }}>($4,000–$12,000)</span>
