@@ -7,6 +7,7 @@ import glowing from "../../Assets/Projects/glowing.png";
 import oblawf from "../../Assets/Projects/oblawf.png";
 import sushi from "../../Assets/Projects/sushi.png";
 import mockupai from "../../Assets/Projects/mockupai.png";
+import cabinetden from "../../Assets/Projects/cabinetden.png";
 
 
 function Projects() {
@@ -28,6 +29,17 @@ function Projects() {
               title="Grilli"
               description="Grilli is a dynamic showcase website designed for a grill restaurant. The site highlights the restaurant's mouth-watering dishes, featuring high-quality visuals and an intuitive layout.The site emphasizes user-friendly navigation and responsiveness, allowing customers to browse the menu, explore the restaurant’s story, and easily make reservations online"
               ghLink="https://github.com/Dakster-z/grilli"
+              demoLink=""
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={cabinetden}
+              isBlog={false}
+              title="Dental clinic"
+              description="Site vitrine moderne pour une clinique dentaire, présentant les services, l’équipe médicale, les témoignages patients et un formulaire de prise de rendez-vous en ligne. Design épuré, navigation intuitive et compatible mobile"
+              ghLink="https://github.com/Dakster-z/dental-clinicv2.git"
               demoLink=""
             />
           </Col>
