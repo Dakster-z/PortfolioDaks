@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import grilli from "../../Assets/Projects/grilli.png";
+import immersivest from "../../Assets/Projects/immersivest.png";
+import digitweb from "../../Assets/Projects/digitweb.png";
 import glowing from "../../Assets/Projects/glowing.png";
 import oblawf from "../../Assets/Projects/oblawf.png";
 import sushi from "../../Assets/Projects/sushi.png";
@@ -33,6 +35,30 @@ function Projects() {
             />
           </Col>
 
+          {/* Projet HoloLens Pro - Immersive Story Site */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={immersivest} // image temporaire
+              isBlog={false}
+              title="Immersive Story Site"
+              description="Une plateforme moderne dédiée à la technologie holographique avancée. Le site présente des solutions de réalité augmentée avec un design futuriste utilisant des tons bleus et des éléments 3D. L'interface propose une navigation intuitive avec des sections pour les produits, caractéristiques, applications, et démonstrations. Le design met l'accent sur l'innovation technologique avec des visuels immersifs et une approche professionnelle pour transformer l'expérience utilisateur."
+              ghLink="Privé sur demande"
+              demoLink="https://immersive-story-site.vercel.app/"
+            />
+          </Col>
+
+          {/* Projet Agence Digitale - Digital Craft Shine */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={digitweb} // image temporaire
+              isBlog={false}
+              title="Ai Digital Craft Shine"
+              description="Un site vitrine professionnel pour une agence de développement web spécialisée dans les solutions haut de gamme. Le design utilise une palette orange/noir avec des éléments de code intégrés visuellement. Le site met en avant les services personnalisés, l'automatisation IA, et l'approche axée sur la croissance. L'interface présente des métriques impressionnantes et propose des solutions sur mesure pour les entreprises en croissance."
+              ghLink="Privé sur demande"
+              demoLink="https://digital-craft-shine.vercel.app/"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={cabinetden}
@@ -40,7 +66,7 @@ function Projects() {
               title="Dental clinic"
               description="Site vitrine moderne pour une clinique dentaire, présentant les services, l’équipe médicale, les témoignages patients et un formulaire de prise de rendez-vous en ligne. Design épuré, navigation intuitive et compatible mobile"
               ghLink="https://github.com/Dakster-z/dental-clinicv2.git"
-              demoLink=""
+              demoLink="https://dental-clinicv2.vercel.app/"
             />
           </Col>
 
@@ -86,18 +112,6 @@ function Projects() {
               title="TaskAutomator"
               description="Une PME voulait automatiser son suivi de tâches et générer des rapports.
 Solution : Application web avec espace admin, gestion de tâches, intégrations API (Slack/Email)."
-              ghLink=""
-              demoLink=""
-            />
-          </Col>
-        
-        <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={sushi}
-              isBlog={false}
-              title="CoachFlow"
-              description="Contexte : Un coach voulait centraliser ses demandes de rdv + suivi clients.
-Solution : Site vitrine avec formulaire automatisé → email + CRM + Google Calendar."
               ghLink=""
               demoLink=""
             />
