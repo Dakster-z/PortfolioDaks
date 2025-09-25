@@ -14,7 +14,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
-import { AiOutlineCustomerService } from "react-icons/ai";
+import { MdContactMail } from "react-icons/md";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -68,11 +68,20 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/about"
+                href="/#about"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/skills"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Skills
               </Nav.Link>
             </Nav.Item>
 
@@ -89,11 +98,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
-              <Nav.Link as={Link} to="/services" onClick={() => updateExpanded(false)}>
-                <AiOutlineCustomerService style={{ marginBottom: "2px" }} /> Services
-              </Nav.Link>
-            </Nav.Item>
+
 
             <Nav.Item>
               <Nav.Link
