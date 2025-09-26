@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Form, InputGroup } from "react-bootstrap";
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import { BsSearch, BsFilter } from "react-icons/bs";
 import grilli from "../../Assets/Projects/grilli.png";
 import immersivest from "../../Assets/Projects/immersivest.png";
 import digitweb from "../../Assets/Projects/digitweb.png";
@@ -13,11 +12,8 @@ import mockupai from "../../Assets/Projects/mockupai.png";
 import cabinetden from "../../Assets/Projects/cabinetden.png";
 import salty from "../../Assets/Projects/salty.png"; 
 import tasty from "../../Assets/Projects/tasty.png";
+import hotel from "../../Assets/Projects/hotel.png";
 function Projects() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedClientType, setSelectedClientType] = useState("All");
-
   // Enhanced project data with creative agency features
   const projectsData = [
     {
@@ -198,22 +194,24 @@ function Projects() {
       },
       ghLink: "",
       demoLink: "https://responsive-website-mu-one.vercel.app/#home"
+    }, 
+    {
+      imgPath: hotel,
+      title: "Fancyhostel",
+      category: "Hospitality",
+      clientType: "M",
+      featured: false,
+      description: "Site vitrine moderne pour un hotel 3 étoiles, présentant les services, et un formulaire de prise de rendez-vous en ligne.",
+      technologies: ["React", "Bootstrap", "Node.js"],
+      metrics: {
+        roi: 120,
+        timeline: "4 weeks",
+        teamSize: 2
+      },
+      ghLink: "https://github.com/Dakster-z/dental-clinicv2.git",
+      demoLink: "https://github.com/Dakster-z/hotel.git"
     }
   ];
-
-  // Filter projects based on search and category
-  const filteredProjects = projectsData.filter(project => {
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "All" || project.category === selectedCategory;
-    const matchesClientType = selectedClientType === "All" || project.clientType === selectedClientType;
-    
-    return matchesSearch && matchesCategory && matchesClientType;
-  });
-
-  // Get unique categories and client types
-  const categories = ["All", ...new Set(projectsData.map(project => project.category))];
-  const clientTypes = ["All", ...new Set(projectsData.map(project => project.clientType))];
 
   return (
     <Container fluid className="project-section">
@@ -226,47 +224,9 @@ function Projects() {
           Here are a few projects I've worked on recently. Each project showcases unique challenges, creative solutions, and measurable results.
         </p>
 
-        {/* Search and Filter Section */}
-        <Row className="mb-4">
-          <Col md={6}>
-            <InputGroup>
-              <InputGroup.Text>
-                <BsSearch />
-              </InputGroup.Text>
-              <Form.Control
-                type="text"
-                placeholder="Search projects..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </InputGroup>
-          </Col>
-          <Col md={3}>
-            <Form.Select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-            >
-              {categories.map(category => (
-                <option key={category} value={category}>{category}</option>
-              ))}
-            </Form.Select>
-          </Col>
-          <Col md={3}>
-            <Form.Select
-              value={selectedClientType}
-              onChange={(e) => setSelectedClientType(e.target.value)}
-            >
-              {clientTypes.map(type => (
-                <option key={type} value={type}>{type}</option>
-              ))}
-            </Form.Select>
-          </Col>
-        </Row>
-
         {/* Projects Grid */}
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {filteredProjects.length > 0 ? (
-            filteredProjects.map((project, index) => (
+          {projectsData.map((project, index) => (
               <Col md={4} className="project-card" key={index}>
                 <ProjectCard
                   key={index}
@@ -289,14 +249,7 @@ function Projects() {
                   results={project.results}
                 />
               </Col>
-            ))
-          ) : (
-            <Col md={12} className="text-center">
-              <p style={{ color: "white", fontSize: "1.2em", marginTop: "50px" }}>
-                No projects found matching your criteria. Try adjusting your search or filters.
-              </p>
-            </Col>
-          )}
+            ))}
         </Row>
 
         {/* Project Statistics */}
