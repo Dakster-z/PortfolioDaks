@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Modal, Badge, ProgressBar } from 'react-bootstrap';
-import { FaCode, FaPalette, FaMobile, FaServer, FaDatabase, FaCloud, FaTools } from 'react-icons/fa';
+import { FaCode, FaPalette, FaServer, FaDatabase } from 'react-icons/fa';
 import './Skills.css';
 
 function Skills() {

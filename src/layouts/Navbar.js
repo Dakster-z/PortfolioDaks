@@ -14,7 +14,6 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
-import { MdContactMail } from "react-icons/md";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);

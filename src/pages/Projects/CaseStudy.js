@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Badge, Button, ProgressBar, Modal, Carousel } from "react-bootstrap";
+import { Container, Row, Col, Card, Badge, Button, Modal } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
-import Particle from "../Particle";
-import { FaArrowLeft, FaExternalLinkAlt, FaGithub, FaClock, FaUsers, FaTrophy, FaLightbulb, FaCogs, FaRocket, FaChartLine } from "react-icons/fa";
+import Particle from "../../shared/effects/Particle";
+import { FaArrowLeft, FaExternalLinkAlt, FaClock, FaUsers, FaTrophy, FaLightbulb, FaCogs, FaRocket, FaChartLine } from "react-icons/fa";
 import { BsArrowRight, BsCheckCircle } from "react-icons/bs";
 import placeholderProject from "../../Assets/placeholder-project.svg";
-import placeholderAvatar from "../../Assets/placeholder-avatar.svg";
 import "./CaseStudy.css";
 
 function CaseStudy() {

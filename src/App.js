@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from "react";
-import Preloader from "../src/components/Pre";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Footer from "./components/Footer";
-import Resume from "./components/Resume/ResumeNew";
-import Skills from "./components/Skills/Skills";
-import CaseStudy from "./components/Projects/CaseStudy";
-import BackToTop from "./components/BackToTop";
+import Preloader from "./shared/effects/Pre";
+import Navbar from "./layouts/Navbar";
+import Home from "./pages/Home/Home";
+import Projects from "./pages/Projects/Projects";
+import Footer from "./layouts/Footer";
+import Resume from "./pages/Resume/ResumeNew";
+import Skills from "./pages/Skills/Skills";
+import CaseStudy from "./pages/Projects/CaseStudy";
+import BackToTop from "./shared/ui/BackToTop";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   Navigate
 } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./shared/ui/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
