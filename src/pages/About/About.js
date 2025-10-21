@@ -5,10 +5,11 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+import styles from "./About.module.css";
 
 function About() {
   return (
-    <Container fluid className="about-section">
+    <Container fluid className={styles.aboutSection}>
       <Particle />
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
@@ -28,7 +29,7 @@ function About() {
           <Col
             md={5}
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
+            className={styles.aboutImg}
           >
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>

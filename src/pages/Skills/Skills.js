@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Modal, Badge, ProgressBar } from 'react-bootstrap';
 import { FaCode, FaPalette, FaServer, FaDatabase } from 'react-icons/fa';
 import './Skills.css';
+import styles from './Skills.module.css';
 
 function Skills() {
   const [selectedSkill, setSelectedSkill] = useState(null);
@@ -77,39 +78,39 @@ function Skills() {
   };
 
   return (
-    <Container fluid className="skills-section">
-      <Container>
+    <Container fluid className={styles.skillsSection}>
+      <Container className={styles.sectionContainer}>
         <Row>
           <Col md={12} className="text-center">
-            <h1 className="skills-heading">
-              My <strong className="purple">Expertise</strong>
-            </h1>
-            <p className="skills-description">
-              A comprehensive overview of my technical skills, experience, and capabilities as a full-stack developer and designer.
-            </p>
+            <h1 className={styles.skillsHeading}>
+               My <strong className="purple">Expertise</strong>
+             </h1>
+            <p className={styles.skillsDescription}>
+               A comprehensive overview of my technical skills, experience, and capabilities as a full-stack developer and designer.
+             </p>
           </Col>
         </Row>
 
         {/* Skill Categories */}
-        <Row className="skills-categories">
+        <Row className={styles.skillsCategories}>
           {skillCategories.map((category) => (
-            <Col md={6} lg={3} key={category.id} className="skill-category">
+            <Col md={6} lg={3} key={category.id} className={styles.skillCategory}>
               <Card 
-                className="skill-card" 
+                className={styles.skillCard} 
                 onClick={() => handleSkillClick(category)}
                 style={{ borderColor: category.color }}
               >
                 <Card.Body className="text-center d-flex flex-column">
                   <div 
-                    className="skill-icon" 
+                    className={styles.skillIcon} 
                     style={{ color: category.color }}
                   >
                     {category.icon}
                   </div>
-                  <h4 className="skill-title">{category.title}</h4>
-                  <p className="skill-description">{category.description}</p>
+                  <h4 className={styles.skillTitle}>{category.title}</h4>
+                  <p className={styles.skillDescription}>{category.description}</p>
                   <Badge 
-                    className="skill-count mt-auto"
+                    className={`${styles.skillCount} mt-auto`}
                     style={{ backgroundColor: category.color }}
                   >
                     {category.skills.length} Skills
@@ -122,9 +123,15 @@ function Skills() {
       </Container>
 
       {/* Skill Detail Modal */}
-      <Modal show={showModal} onHide={handleClose} size="lg" centered>
-        <Modal.Header closeButton>
-          <Modal.Title>
+      <Modal 
+        show={showModal} 
+        onHide={handleClose} 
+        size="lg" 
+        centered
+        contentClassName={styles.modalContent}
+      >
+        <Modal.Header closeButton className={styles.modalHeader}>
+          <Modal.Title className={styles.modalTitle}>
             {selectedSkill && (
               <>
                 <span style={{ color: selectedSkill.color }}>
@@ -135,16 +142,16 @@ function Skills() {
             )}
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className={styles.modalBody}>
           {selectedSkill && (
             <>
               <p className="mb-4">{selectedSkill.description}</p>
               <Row>
                 {selectedSkill.skills.map((skill, index) => (
-                  <Col md={12} key={index} className="skill-detail mb-3">
+                  <Col md={12} key={index} className={`${styles.skillDetail} mb-3`}>
                     <div className="d-flex justify-content-between align-items-center mb-2">
-                      <h6 className="skill-name mb-0">{skill.name}</h6>
-                      <div className="skill-meta">
+                      <h6 className={`${styles.skillName} mb-0`}>{skill.name}</h6>
+                      <div className={styles.skillMeta}>
                         <Badge variant="outline-info" className="me-2">
                           {skill.experience}
                         </Badge>
@@ -157,7 +164,7 @@ function Skills() {
                       now={skill.level} 
                       label={`${skill.level}%`}
                       variant="info"
-                      className="skill-progress"
+                      className={styles.skillProgress}
                     />
                   </Col>
                 ))}

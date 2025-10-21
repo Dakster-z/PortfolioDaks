@@ -1,0 +1,84 @@
+/* Resume Module: Section and Resume Container */
+.resumeSection {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 30px;
+  background-image: var(--section-background-color);
+  color: var(--text);
+}
+
+.resume {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+}
+
+.resumeLeft {
+  padding-right: 80px;
+}
+
+.resumeRight {
+  padding-left: 80px;
+}
+
+@media (max-width: 767px) {
+  .resumeLeft {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .resumeRight {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.resumeTitle {
+  font-size: 2em;
+  font-weight: 700;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.resumeItem {
+  padding: 0 0 10px 25px;
+  margin-top: -2px;
+  border-left: 2px solid var(--accent);
+  position: relative;
+}
+
+.resumeItemTitle {
+  line-height: 18px;
+  font-size: 0.9em;
+  background: rgba(82, 52, 121, 0.36);
+  padding: 8px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resumeItemList {
+  padding-left: 20px;
+  text-align: justify;
+}
+
+.resumeItemList li {
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+.resumeItem:last-child {
+  padding-bottom: 0;
+}
+
+.resumeItem::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid var(--accent);
+}

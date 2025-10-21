@@ -26,7 +26,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deps:outdated": "npm outdated || true",
+    "deps:audit": "npm audit --audit-level=moderate || true",
+    "deps:update:minor": "npm update --depth 2",
+    "deps:audit:fix": "npm audit fix || true"
+  },
+  "overrides": {
+    "pdfjs-dist": "2.15.349"
   },
   "eslintConfig": {
     "extends": [

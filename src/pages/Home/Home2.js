@@ -8,17 +8,18 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import styles from "./Home.module.css";
 
 function Home2() {
   return (
-    <Container fluid className="home-about-section" id="about">
+    <Container fluid className={styles.homeAboutSection} id="about">
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
+          <Col md={8} className={styles.homeAboutDescription}>
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
-            <p className="home-about-body">
+            <p className={styles.homeAboutBody}>
             I’ve developed a passion for programming, mastering languages like Java, JavaScript, and PHP...
               <br />
               <br />I am fluent in classics like
@@ -51,25 +52,25 @@ function Home2() {
               </i>
             </p>
           </Col>
-          <Col md={4} className="myAvtar">
+          <Col md={4} className={styles.myAvatar}>
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
         </Row>
         <Row>
-          <Col md={12} className="home-about-social">
+          <Col md={12} className={styles.homeAboutSocial}>
             <h1>FIND ME ON</h1>
             <p>
               Feel free to <span className="purple">connect </span>with me
             </p>
-            <ul className="home-about-social-links">
+            <ul className={styles.homeAboutSocialLinks}>
               <li className="social-icons">
                 <a
                   href="https://github.com/Dakster-z"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className={`${styles.homeSocialIcons} icon-colour`}
                 >
                   <AiFillGithub />
                 </a>
@@ -79,7 +80,7 @@ function Home2() {
                   href="https://x.com/ZaidDakir79416"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className={`${styles.homeSocialIcons} icon-colour`}
                 >
                   <AiOutlineTwitter />
                 </a>
@@ -89,7 +90,7 @@ function Home2() {
                   href="https://www.linkedin.com/in/zaid-dakir-31253a26a/"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className={`${styles.homeSocialIcons} icon-colour`}
                 >
                   <FaLinkedinIn />
                 </a>
@@ -99,7 +100,7 @@ function Home2() {
                   href="--"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour home-social-icons"
+                  className={`${styles.homeSocialIcons} icon-colour`}
                 >
                   <AiFillInstagram />
                 </a>
@@ -111,4 +112,5 @@ function Home2() {
     </Container>
   );
 }
+
 export default Home2;

@@ -1,0 +1,149 @@
+/* Skills Module: Section, Heading, Categories */
+.skillsSection {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.skillsSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.sectionContainer {
+  position: relative;
+  z-index: 2;
+}
+
+.skillsHeading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.skillsDescription {
+  font-size: 1.2rem;
+  color: var(--text);
+  opacity: 0.9;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Categories */
+.skillsCategories {
+  margin-bottom: 5rem;
+}
+
+.skillCategory {
+  margin-bottom: 2rem;
+}
+
+.skillCard {
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+}
+
+.skillCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.skillIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.skillTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.skillDescription {
+  font-size: 0.95rem;
+  color: var(--text);
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.skillCount {
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Modal and Skill Detail */
+.modalContent {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.modalHeader {
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem;
+  background: var(--bg-alt);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.modalBody {
+  padding: 2rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.skillDetail {
+  padding: 1rem;
+  background: var(--bg-alt);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+}
+
+.skillName {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.skillMeta {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.skillProgress {
+  height: 8px;
+  border-radius: 4px;
+}
+
+.skillProgress :global(.progress-bar) {
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+}

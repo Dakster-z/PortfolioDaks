@@ -1,0 +1,33 @@
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f5f7fa;
+  --text: #1a1a1a;
+  --text-muted: #666666;
+  --primary: #667eea;
+  --secondary: #764ba2;
+  --accent: #c770f0;
+  --border: #dddddd;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg: #13121a;
+  --bg-alt: #1a1923;
+  --text: #e8e8e8;
+  --text-muted: #b0b0b0;
+  --primary: #8892f6;
+  --secondary: #9c6cd6;
+  --accent: #c770f0; /* keep brand accent */
+  --border: #2a2a36;
+}
+
+/* Optional global helpers using variables */
+body {
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* Utility examples (use if needed)
+.textMuted { color: var(--text-muted); }
+.borderBase { border-color: var(--border); }
+ */

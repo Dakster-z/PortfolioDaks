@@ -1,0 +1,19 @@
+/* About Module: Section and Image */
+.aboutSection {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 30px;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
+  color: var(--text);
+}
+
+.aboutImg {
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  .aboutImg {
+    padding-top: 0;
+  }
+}

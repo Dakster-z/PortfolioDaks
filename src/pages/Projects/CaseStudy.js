@@ -6,6 +6,7 @@ import { FaArrowLeft, FaExternalLinkAlt, FaClock, FaUsers, FaTrophy, FaLightbulb
 import { BsArrowRight, BsCheckCircle } from "react-icons/bs";
 import placeholderProject from "../../Assets/placeholder-project.svg";
 import "./CaseStudy.css";
+import styles from "./CaseStudy.module.css";
 
 function CaseStudy() {
   const { projectId } = useParams();
@@ -140,41 +141,41 @@ function CaseStudy() {
   }
 
   return (
-    <Container fluid className="case-study-section">
+      <Container fluid className={styles.caseStudySection}>
       <Particle />
       
       {/* Hero Section */}
-      <div className="case-study-hero" style={{ backgroundImage: `url(${project.heroImage})` }}>
-        <div className="hero-overlay">
-          <Container>
-            <Row>
-              <Col md={12}>
+      <div className={styles.caseStudyHero} style={{ backgroundImage: `url(${project.heroImage})` }}>
+        <div className={styles.heroOverlay}>
+           <Container>
+             <Row>
+               <Col md={12}>
                 <Button 
                   variant="outline-light" 
-                  className="back-btn mb-4"
+                  className={`${styles.backBtn} mb-4`}
                   onClick={() => navigate('/project')}
                 >
                   <FaArrowLeft /> Back to Projects
                 </Button>
                 
-                <div className="hero-content">
-                  <Badge bg="primary" className="category-badge mb-3">
+                <div className={styles.heroContent}>
+                  <Badge bg="primary" className={`${styles.categoryBadge} mb-3`}>
                     {project.category}
                   </Badge>
-                  <h1 className="hero-title">{project.title}</h1>
-                  <p className="hero-subtitle">{project.subtitle}</p>
+                  <h1 className={styles.heroTitle}>{project.title}</h1>
+                  <p className={styles.heroSubtitle}>{project.subtitle}</p>
                   
-                  <div className="project-meta">
-                    <div className="meta-item">
-                      <FaClock className="meta-icon" />
+                  <div className={styles.projectMeta}>
+                    <div className={styles.metaItem}>
+                      <FaClock className={styles.metaIcon} />
                       <span>{project.duration}</span>
                     </div>
-                    <div className="meta-item">
-                      <FaUsers className="meta-icon" />
+                    <div className={styles.metaItem}>
+                      <FaUsers className={styles.metaIcon} />
                       <span>{project.team}</span>
                     </div>
-                    <div className="meta-item">
-                      <FaTrophy className="meta-icon" />
+                    <div className={styles.metaItem}>
+                      <FaTrophy className={styles.metaIcon} />
                       <span>{project.year}</span>
                     </div>
                   </div>
@@ -185,16 +186,16 @@ function CaseStudy() {
         </div>
       </div>
 
-      <Container>
-        {/* Project Overview */}
-        <Row className="overview-section">
-          <Col md={12}>
-            <h2 className="section-title">Project Overview</h2>
+       <Container>
+         {/* Project Overview */}
+        <Row className={styles.overviewSection}>
+           <Col md={12}>
+            <h2 className={styles.sectionTitle}>Project Overview</h2>
           </Col>
           <Col md={4}>
-            <Card className="overview-card challenge-card">
+            <Card className={`${styles.overviewCard} ${styles.challengeCard}`}>
               <Card.Body>
-                <div className="card-icon">
+                <div className={styles.cardIcon}>
                   <FaLightbulb />
                 </div>
                 <h4>Challenge</h4>
@@ -203,9 +204,9 @@ function CaseStudy() {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className="overview-card solution-card">
+            <Card className={`${styles.overviewCard} ${styles.solutionCard}`}>
               <Card.Body>
-                <div className="card-icon">
+                <div className={styles.cardIcon}>
                   <FaCogs />
                 </div>
                 <h4>Solution</h4>
@@ -214,9 +215,9 @@ function CaseStudy() {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className="overview-card impact-card">
+            <Card className={`${styles.overviewCard} ${styles.impactCard}`}>
               <Card.Body>
-                <div className="card-icon">
+                <div className={styles.cardIcon}>
                   <FaRocket />
                 </div>
                 <h4>Impact</h4>
@@ -224,18 +225,18 @@ function CaseStudy() {
               </Card.Body>
             </Card>
           </Col>
-        </Row>
+         </Row>
 
-        {/* Key Metrics */}
-        <Row className="metrics-section">
-          <Col md={12}>
-            <h2 className="section-title">Key Metrics</h2>
+         {/* Key Metrics */}
+        <Row className={styles.metricsSection}>
+           <Col md={12}>
+            <h2 className={styles.sectionTitle}>Key Metrics</h2>
           </Col>
           {Object.entries(project.metrics).map(([key, value], index) => (
             <Col md={2} key={index}>
-              <div className="metric-card">
-                <div className="metric-value">{value}</div>
-                <div className="metric-label">{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</div>
+              <div className={styles.metricCard}>
+                <div className={styles.metricValue}>{value}</div>
+                <div className={styles.metricLabel}>{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</div>
               </div>
             </Col>
           ))}

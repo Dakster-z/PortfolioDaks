@@ -21,7 +21,7 @@ function AboutCard() {
           margin: "25px 0"
         }}>
           <div>
-            <h3 style={{ color: "#c770f0" }}>🎯 Technical Expertise</h3>
+            <h3 style={{ color: "var(--accent)" }}>🎯 Technical Expertise</h3>
             <ul>
               <li>Frontend: React, Next.js, JavaScript, Tailwind CSS</li>
               <li>Backend: Node.js, Python, Express, REST APIs</li>
@@ -30,7 +30,7 @@ function AboutCard() {
             </ul>
           </div>
           <div>
-            <h3 style={{ color: "#c770f0" }}>🚀 What I Build</h3>
+            <h3 style={{ color: "var(--accent)" }}>🚀 What I Build</h3>
             <ul>
               <li>AI-enhanced web applications</li>
               <li>Business automation tools</li>

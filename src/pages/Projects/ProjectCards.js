@@ -8,7 +8,7 @@ import { CgWebsite } from "react-icons/cg";
 import { BsGithub, BsEye, BsAward, BsGraphUp, BsClock } from "react-icons/bs";
 import { FaUsers, FaRocket, FaPalette } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import "./ProjectCards.css";
+import styles from "./ProjectCards.module.css";
 
 function ProjectCards(props) {
   const [showModal, setShowModal] = useState(false);
@@ -24,35 +24,35 @@ function ProjectCards(props) {
 
   return (
     <>
-      <Card className="project-card-view enhanced-card">
-        <div className="card-image-container">
+      <Card className={`project-card-view ${styles.enhancedCard}`}>
+        <div className={styles.cardImageContainer}>
           <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-          <div className="card-overlay">
+          <div className={styles.cardOverlay}>
             <Button 
               variant="outline-light" 
-              className="overlay-btn"
+              className={styles.overlayBtn}
               onClick={handleShow}
             >
               <BsEye /> View Details
             </Button>
           </div>
           {props.category && (
-            <Badge bg="primary" className="category-badge">
+            <Badge bg="primary" className={styles.categoryBadge}>
               {props.category}
             </Badge>
           )}
           {props.featured && (
-            <Badge bg="warning" text="dark" className="featured-badge">
+            <Badge bg="warning" text="dark" className={styles.featuredBadge}>
               <BsAward /> Featured
             </Badge>
           )}
         </div>
         
         <Card.Body>
-          <div className="project-header">
+          <div className={styles.projectHeader}>
             <Card.Title>{props.title}</Card.Title>
             {props.clientType && (
-              <Badge bg="secondary" className="client-type-badge">
+              <Badge bg="secondary" className={styles.clientTypeBadge}>
                 {props.clientType}
               </Badge>
             )}
@@ -64,22 +64,22 @@ function ProjectCards(props) {
 
           {/* Project Metrics */}
           {props.metrics && (
-            <div className="project-metrics">
+            <div className={styles.projectMetrics}>
               {props.metrics.roi && (
-                <div className="metric-item">
-                  <BsGraphUp className="metric-icon" />
+                <div className={styles.metricItem}>
+                  <BsGraphUp className={styles.metricIcon} />
                   <span>+{props.metrics.roi}% ROI</span>
                 </div>
               )}
               {props.metrics.timeline && (
-                <div className="metric-item">
-                  <BsClock className="metric-icon" />
+                <div className={styles.metricItem}>
+                  <BsClock className={styles.metricIcon} />
                   <span>{props.metrics.timeline}</span>
                 </div>
               )}
               {props.metrics.teamSize && (
-                <div className="metric-item">
-                  <FaUsers className="metric-icon" />
+                <div className={styles.metricItem}>
+                  <FaUsers className={styles.metricIcon} />
                   <span>{props.metrics.teamSize} Team</span>
                 </div>
               )}
@@ -88,16 +88,16 @@ function ProjectCards(props) {
 
           {/* Technology Stack */}
           {props.technologies && (
-            <div className="tech-stack">
+            <div className={styles.techStack}>
               {props.technologies.map((tech, index) => (
-                <Badge key={index} bg="info" className="tech-badge">
+                <Badge key={index} bg="info" className={styles.techBadge}>
                   {tech}
                 </Badge>
               ))}
             </div>
           )}
 
-          <div className="card-actions">
+          <div className={styles.cardActions}>
             <Button variant="primary" href={props.ghLink} target="_blank">
               <BsGithub /> &nbsp;
               {props.isBlog ? "Blog" : "GitHub"}
@@ -129,15 +129,15 @@ function ProjectCards(props) {
 
           {/* Before/After Section */}
           {showBeforeAfter && props.beforeAfter && (
-            <div className="before-after-section">
-              <div className="before-after-container">
-                <div className="before-section">
+            <div className={styles.beforeAfterSection}>
+              <div className={styles.beforeAfterContainer}>
+                <div className={styles.beforeSection}>
                   <h6>Before</h6>
-                  <img src={props.beforeAfter.before} alt="Before" className="before-after-img" />
+                  <img src={props.beforeAfter.before} alt="Before" className={styles.beforeAfterImg} />
                 </div>
-                <div className="after-section">
+                <div className={styles.afterSection}>
                   <h6>After</h6>
-                  <img src={props.beforeAfter.after} alt="After" className="before-after-img" />
+                  <img src={props.beforeAfter.after} alt="After" className={styles.beforeAfterImg} />
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@ function ProjectCards(props) {
         <Modal.Body>
           {/* Image Gallery */}
           {props.gallery && props.gallery.length > 0 && (
-            <Carousel className="project-gallery">
+            <Carousel className={styles.projectGallery}>
               {props.gallery.map((image, index) => (
                 <Carousel.Item key={index}>
                   <img
@@ -172,13 +172,13 @@ function ProjectCards(props) {
           )}
 
           {/* Project Details */}
-          <div className="project-details">
+          <div className={styles.projectDetails}>
             <h5>Project Overview</h5>
             <p>{props.detailedDescription || props.description}</p>
 
             {/* Challenge & Solution */}
             {props.challenge && (
-              <div className="challenge-solution">
+              <div className={styles.challengeSolution}>
                 <h6>Challenge</h6>
                 <p>{props.challenge}</p>
                 
@@ -193,13 +193,13 @@ function ProjectCards(props) {
 
             {/* Process Steps */}
             {props.process && (
-              <div className="process-section">
+              <div className={styles.processSection}>
                 <h6>Creative Process</h6>
-                <div className="process-steps">
+                <div className={styles.processSteps}>
                   {props.process.map((step, index) => (
-                    <div key={index} className="process-step">
-                      <div className="step-number">{index + 1}</div>
-                      <div className="step-content">
+                    <div key={index} className={styles.processStep}>
+                      <div className={styles.stepNumber}>{index + 1}</div>
+                      <div className={styles.stepContent}>
                         <h6>{step.title}</h6>
                         <p>{step.description}</p>
                       </div>
@@ -211,13 +211,13 @@ function ProjectCards(props) {
 
             {/* Results & Impact */}
             {props.results && (
-              <div className="results-section">
+              <div className={styles.resultsSection}>
                 <h6>Results & Impact</h6>
-                <div className="results-grid">
+                <div className={styles.resultsGrid}>
                   {props.results.map((result, index) => (
-                    <div key={index} className="result-item">
-                      <div className="result-value">{result.value}</div>
-                      <div className="result-label">{result.label}</div>
+                    <div key={index} className={styles.resultItem}>
+                      <div className={styles.resultValue}>{result.value}</div>
+                      <div className={styles.resultLabel}>{result.label}</div>
                     </div>
                   ))}
                 </div>

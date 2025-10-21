@@ -1,0 +1,288 @@
+/* Enhanced Project Cards Styles (CSS Modules) */
+.enhancedCard {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.enhancedCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(199, 112, 240, 0.3);
+}
+
+/* Card Image Container */
+.cardImageContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImageContainer img {
+  transition: transform 0.3s ease;
+}
+
+.enhancedCard:hover .cardImageContainer img {
+  transform: scale(1.05);
+}
+
+/* Card Overlay */
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.enhancedCard:hover .cardOverlay {
+  opacity: 1;
+}
+
+.overlayBtn {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.overlayBtn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+/* Badges */
+.categoryBadge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 0.8em;
+  padding: 5px 10px;
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 0.8em;
+  padding: 5px 10px;
+}
+
+.clientTypeBadge {
+  font-size: 0.7em;
+  padding: 3px 8px;
+}
+
+/* Project Header */
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+/* Project Metrics */
+.projectMetrics {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+  padding: 10px;
+  background: rgba(199, 112, 240, 0.1);
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.metricItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.metricIcon {
+  font-size: 1.1em;
+}
+
+/* Technology Stack */
+.techStack {
+  display: flex;
+  gap: 8px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.techBadge {
+  font-size: 0.75em;
+  padding: 4px 8px;
+}
+
+/* Card Actions */
+.cardActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Before/After Section */
+.beforeAfterSection {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.beforeAfterContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.beforeSection,
+.afterSection {
+  text-align: center;
+}
+
+.beforeSection h6,
+.afterSection h6 {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.beforeAfterImg {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+/* Modal Styles */
+.projectGallery .carousel-item img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.projectDetails {
+  padding: 20px 0;
+}
+
+.challengeSolution {
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(199, 112, 240, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+}
+
+/* Process Section */
+.processSection {
+  margin: 20px 0;
+}
+
+.processSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.processStep {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(199, 112, 240, 0.2);
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.stepContent h6 {
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+/* Results Section */
+.resultsSection {
+  margin: 20px 0;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.resultItem {
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--accent), #9c4dcc);
+  color: white;
+  border-radius: 8px;
+}
+
+.resultValue {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.resultLabel {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .beforeAfterContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .projectMetrics {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cardActions {
+    flex-direction: column;
+  }
+  
+  .resultsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .resultsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .processStep {
+    flex-direction: column;
+    text-align: center;
+  }
+}

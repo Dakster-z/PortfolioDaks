@@ -14,10 +14,13 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { BsSun, BsMoon } from "react-icons/bs";
+import { toggleTheme } from "../shared/ui/theme";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const [theme, setTheme] = useState(document.documentElement.getAttribute('data-theme') || 'light');
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -28,6 +31,11 @@ function NavBar() {
   }
 
   window.addEventListener("scroll", scrollHandler);
+
+  const handleToggleTheme = () => {
+    const next = toggleTheme();
+    setTheme(next);
+  };
 
   // Import the missing icon for Services
 
@@ -107,6 +115,17 @@ function NavBar() {
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Button
+                variant="outline-light"
+                onClick={handleToggleTheme}
+                className="ms-2"
+                title="Toggle theme"
+              >
+                {theme === 'dark' ? <BsSun /> : <BsMoon />} Theme
+              </Button>
             </Nav.Item>
 
             <Nav.Item className="fork-btn">
