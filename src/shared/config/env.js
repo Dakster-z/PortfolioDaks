@@ -1,4 +1,16 @@
 // Centralized access to client-side environment variables (CRA requires REACT_APP_ prefix)
+
+export const env = {
+  whatsappPhone: process.env.REACT_APP_WHATSAPP_PHONE || "",
+};
+
+export const whatsappLink = (message = "") => {
+  const phone = env.whatsappPhone.replace(/[^\d]/g, "");
+  const base = "https://wa.me/";
+  if (!phone) return "";
+  const query = message ? `?text=${encodeURIComponent(message)}` : "";
+  return `${base}${phone}${query}`;
+};
 // Only store non-sensitive/public keys here. Secrets must live on the server.
 
 export const EMAILJS = {

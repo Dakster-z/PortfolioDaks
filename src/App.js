@@ -4,10 +4,11 @@ import Navbar from "./layouts/Navbar";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import Footer from "./layouts/Footer";
-import Resume from "./pages/Resume/ResumeNew";
+// import Resume from "./pages/Resume/ResumeNew"; // Temporarily hidden
 import Skills from "./pages/Skills/Skills";
 import CaseStudy from "./pages/Projects/CaseStudy";
 import BackToTop from "./shared/ui/BackToTop";
+import WhatsAppPopup from "./shared/ui/WhatsAppPopup";
 import {
   BrowserRouter as Router,
   Route,
@@ -40,10 +41,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
-          <Route path="/resume" element={<Resume />} />
+          {/** Resume route temporarily disabled */}
+          {/** <Route path="/resume" element={<Resume />} /> */}
           <Route path="/case-study/:id" element={<CaseStudy />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
+        <WhatsAppPopup />
         <BackToTop />
         <Footer />
       </div>
