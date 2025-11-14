@@ -16,6 +16,7 @@ import {
 import { CgFileDocument } from "react-icons/cg";
 import { BsSun, BsMoon } from "react-icons/bs";
 import { toggleTheme } from "../shared/ui/theme";
+import { env } from "../shared/config/env";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -138,6 +139,17 @@ function NavBar() {
                 title="Toggle theme"
               >
                 {theme === 'dark' ? <BsSun /> : <BsMoon />} Theme
+              </Button>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Button
+                href={env.schedulerUrl || "/contact"}
+                target={env.schedulerUrl ? "_blank" : undefined}
+                className="ms-2"
+                variant="success"
+              >
+                Book a Call
               </Button>
             </Nav.Item>
 

@@ -2,6 +2,7 @@
 
 export const env = {
   whatsappPhone: process.env.REACT_APP_WHATSAPP_PHONE || "",
+  schedulerUrl: process.env.REACT_APP_SCHEDULER_URL || "",
 };
 
 export const whatsappLink = (message = "") => {
