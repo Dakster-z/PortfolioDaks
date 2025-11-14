@@ -7,6 +7,7 @@ import Footer from "./layouts/Footer";
 // import Resume from "./pages/Resume/ResumeNew"; // Temporarily hidden
 import Skills from "./pages/Skills/Skills";
 import CaseStudy from "./pages/Projects/CaseStudy";
+import ProjectInquiry from "./pages/Contact/ProjectInquiry";
 import BackToTop from "./shared/ui/BackToTop";
 import WhatsAppPopup from "./shared/ui/WhatsAppPopup";
 import {
@@ -41,6 +42,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
+          <Route path="/contact" element={<ProjectInquiry />} />
           {/** Resume route temporarily disabled */}
           {/** <Route path="/resume" element={<Resume />} /> */}
           <Route path="/case-study/:id" element={<CaseStudy />} />

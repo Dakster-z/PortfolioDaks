@@ -159,7 +159,7 @@ function Projects() {
         teamSize: 2
       },
       ghLink: "https://github.com/Dakster-z/O-B-Lawfirm",
-      demoLink: "o&blawfirm.com"
+      demoLink: "https://oandblawfirm.com"
     },
     {
       imgPath: salty,

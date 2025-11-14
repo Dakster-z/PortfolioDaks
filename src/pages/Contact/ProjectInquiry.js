@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { EMAILJS } from "../../shared/config/env";
 import { Container, Row, Col, Form, Button, Card, Alert, Badge, ProgressBar } from "react-bootstrap";
 import Particle from "../../shared/effects/Particle";
 import { FaUser, FaEnvelope, FaPhone, FaBuilding, FaProjectDiagram, FaPalette, FaCalendarAlt, FaDollarSign, FaLightbulb, FaFileUpload, FaCheckCircle } from "react-icons/fa";
@@ -44,6 +45,7 @@ function ProjectInquiry() {
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState("success");
   const [alertMessage, setAlertMessage] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
   const totalSteps = 5;
   const progressPercentage = (currentStep / totalSteps) * 100;
@@ -167,16 +169,48 @@ function ProjectInquiry() {
     setCurrentStep(prev => Math.max(prev - 1, 1));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Simulate form submission
-    setAlertType("success");
-    setAlertMessage("Thank you! Your project inquiry has been submitted successfully. We'll get back to you within 24 hours.");
-    setShowAlert(true);
-    
-    // Reset form after successful submission
-    setTimeout(() => {
+    setSubmitting(true);
+    try {
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        position: formData.position,
+        project_type: formData.projectType,
+        project_title: formData.projectTitle,
+        project_description: formData.projectDescription,
+        target_audience: formData.targetAudience,
+        goals: formData.goals.join(", "),
+        design_style: formData.designStyle,
+        color_preferences: formData.colorPreferences,
+        brand_guidelines: formData.brandGuidelines,
+        inspiration: formData.inspiration,
+        timeline: formData.timeline,
+        budget: formData.budget,
+        launch_date: formData.launchDate,
+        priority: formData.priority,
+        additional_requirements: formData.additionalRequirements,
+        communication_preference: formData.communicationPreference,
+        hear_about_us: formData.hearAboutUs,
+      };
+      const payload = {
+        service_id: EMAILJS.serviceId,
+        template_id: EMAILJS.templateId,
+        user_id: EMAILJS.publicKey,
+        template_params: templateParams,
+      };
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("Submission failed");
+      setAlertType("success");
+      setAlertMessage("Thank you! Your project inquiry has been submitted successfully. We'll get back to you within 24 hours.");
+      setShowAlert(true);
       setFormData({
         name: "", email: "", phone: "", company: "", position: "",
         projectType: "", projectTitle: "", projectDescription: "", targetAudience: "", goals: [],
@@ -185,8 +219,15 @@ function ProjectInquiry() {
         additionalRequirements: "", files: [], communicationPreference: "", hearAboutUs: ""
       });
       setCurrentStep(1);
-      setShowAlert(false);
-    }, 5000);
+      setTimeout(() => setShowAlert(false), 5000);
+    } catch (err) {
+      setAlertType("danger");
+      setAlertMessage("Sorry, something went wrong. Please try again or contact us directly.");
+      setShowAlert(true);
+      setTimeout(() => setShowAlert(false), 5000);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const renderStepContent = () => {
@@ -643,6 +684,7 @@ function ProjectInquiry() {
                         type="submit" 
                         variant="success"
                         className="nav-btn submit-btn ms-auto"
+                        disabled={submitting}
                       >
                         Submit Project Brief <FaCheckCircle />
                       </Button>

@@ -105,6 +105,16 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/contact"
+                onClick={() => updateExpanded(false)}
+              >
+                Contact
+              </Nav.Link>
+            </Nav.Item>
+
 
 
             {/** Resume link temporarily hidden */}
