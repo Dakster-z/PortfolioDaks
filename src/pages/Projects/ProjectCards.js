@@ -26,7 +26,7 @@ function ProjectCards(props) {
     <>
       <Card className={`project-card-view ${styles.enhancedCard}`}>
         <div className={styles.cardImageContainer}>
-          <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+          <Card.Img variant="top" src={props.imgPath} alt="card-img" loading="lazy" decoding="async" />
           <div className={styles.cardOverlay}>
             <Button 
               variant="outline-light" 
@@ -133,11 +133,11 @@ function ProjectCards(props) {
               <div className={styles.beforeAfterContainer}>
                 <div className={styles.beforeSection}>
                   <h6>Before</h6>
-                  <img src={props.beforeAfter.before} alt="Before" className={styles.beforeAfterImg} />
+                  <img src={props.beforeAfter.before} alt="Before" className={styles.beforeAfterImg} loading="lazy" decoding="async" />
                 </div>
                 <div className={styles.afterSection}>
                   <h6>After</h6>
-                  <img src={props.beforeAfter.after} alt="After" className={styles.beforeAfterImg} />
+                  <img src={props.beforeAfter.after} alt="After" className={styles.beforeAfterImg} loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -160,6 +160,8 @@ function ProjectCards(props) {
                     className="d-block w-100"
                     src={image.src}
                     alt={image.alt || `Gallery image ${index + 1}`}
+                    loading="lazy"
+                    decoding="async"
                   />
                   {image.caption && (
                     <Carousel.Caption>
