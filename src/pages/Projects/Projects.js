@@ -11,6 +11,7 @@ import cabinetden from "../../Assets/Projects/cabinetden.png";
 import salty from "../../Assets/Projects/salty.png"; 
 import tasty from "../../Assets/Projects/tasty.png";
 import hotel from "../../Assets/Projects/hotel.png";
+import laser from "../../Assets/Projects/laser.png";
 function Projects() {
   // Enhanced project data with creative agency features
   const projectsData = [
@@ -114,6 +115,25 @@ function Projects() {
       demoLink: "https://digital-craft-shine.vercel.app/"
     },
     {
+      imgPath: laser,
+      title: "Laser Center",
+      category: "Clinic",
+      clientType: "Agency",
+      featured: true,
+      description: "Un site vitrine professionnel pour un centre de laser et de services haut de gamme.",
+      detailedDescription: ".",
+      technologies: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+      metrics: {
+        roi: 180,
+        timeline: "4 weeks",
+        teamSize: 5
+      },
+      challenge: "Creating a premium brand presence that showcases technical expertise and attracts high-value clients.",
+      solution: "Developed a sophisticated website with interactive elements and case study presentations.",
+      ghLink: "https://github.com/Dakster-z/laser-clinic-website.git",
+      demoLink: "https://laser-clinic-website.vercel.app/"
+    },
+    {
       imgPath: cabinetden,
       title: "Dental Clinic",
       category: "Healthcare",
@@ -183,7 +203,7 @@ function Projects() {
       category: "Food & Hospitality" ,
       clientType: "SME",
       featured: false,
-      description: "Une Application web pour un restaurant fancy de sushui .",
+      description: "Une Application web pour un restaurant fancy de sushi .",
       technologies: ["React", "Node.js"], 
       metrics: {
         roi: 300,
@@ -206,8 +226,8 @@ function Projects() {
         timeline: "4 weeks",
         teamSize: 2
       },
-      ghLink: "https://github.com/Dakster-z/dental-clinicv2.git",
-      demoLink: "https://github.com/Dakster-z/hotel.git"
+      ghLink: "https://github.com/Dakster-z/hotel",
+      demoLink: "https://hotel-daksster.vercel.app/"
     }
   ];
 
