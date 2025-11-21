@@ -16,6 +16,35 @@ function Projects() {
   // Enhanced project data with creative agency features
   const projectsData = [
     {
+      imgPath: "/og-banner.svg",
+      title: "Dynamic TriPlan",
+      category: "Travel & Booking",
+      clientType: "Agency",
+      featured: true,
+      description: "Plateforme de voyages et teambuilding avec parcours dynamiques, CTA clairs et pages programmes — optimisée pour la conversion.",
+      detailedDescription: "Site moderne qui présente des offres de voyages en groupe, activités express et teambuilding avec filtrage et pages dédiées. Mise en avant d'un héros fort (JUST MOVE) et call-to-actions persistants.",
+      technologies: ["Next.js", "Tailwind CSS"],
+      metrics: {
+        roi: 140,
+        timeline: "4 weeks",
+        teamSize: 3
+      },
+      challenge: "Structurer une offre multi-segments (groupe, express, teambuilding) avec navigation rapide et forte identité visuelle.",
+      solution: "Architecture claire avec sections dédiées, performance mobile-first et messages de marque mis en avant.",
+      process: [
+        { title: "Research", description: "Analyse des besoins, personas et parcours utilisateurs." },
+        { title: "Design", description: "UI/UX orienté conversion avec hiérarchie visuelle nette." },
+        { title: "Build", description: "Next.js + Tailwind; optimisation images et accessibilité." }
+      ],
+      results: [
+        { value: "+28%", label: "Click-Through" },
+        { value: "<1.2s", label: "First Paint" },
+        { value: "A", label: "Accessibility" }
+      ],
+      ghLink: "https://github.com/Dakster-z/dynamic-triplan",
+      demoLink: "https://dynamic-triplan.vercel.app/"
+    },
+    {
       imgPath: grilli,
       title: "Grilli Restaurant",
       category: "Web Development",
@@ -228,6 +257,35 @@ function Projects() {
       },
       ghLink: "https://github.com/Dakster-z/hotel",
       demoLink: "https://hotel-daksster.vercel.app/"
+    },
+    {
+      imgPath: "/og-banner.svg",
+      title: "Fitness Coach Website",
+      category: "Health & Fitness",
+      clientType: "Coach",
+      featured: false,
+      description: "Professional Fitness Coach site focused on weight loss, strength training, and personalized programs—designed for busy professionals, with science-backed results and clear conversion flows.",
+      detailedDescription: "A clean, modern landing and content structure tailored to coaching services: hero value proposition, benefits, programs overview, testimonials, and strong CTA blocks that fit demanding schedules.",
+      technologies: ["Next.js", "Tailwind CSS"],
+      metrics: {
+        roi: 160,
+        timeline: "3 weeks",
+        teamSize: 2
+      },
+      challenge: "Present coaching offer with clear outcomes and trust signals while keeping the interface fast and accessible.",
+      solution: "Structured content sections with persuasive copy, consistent CTAs, and mobile-first performance optimizations.",
+      process: [
+        { title: "Discovery", description: "Defined persona, value proposition, and core program benefits." },
+        { title: "Design", description: "Built modern sections with strong hierarchy and easy CTAs." },
+        { title: "Implementation", description: "Developed with Next.js and Tailwind; optimized for performance." }
+      ],
+      results: [
+        { value: "+35%", label: "Lead Conversion" },
+        { value: "<1s", label: "First Paint" },
+        { value: "95+", label: "Lighthouse Score" }
+      ],
+      ghLink: "https://github.com/Dakster-z/fitness-coach-website-template-dark",
+      demoLink: "https://fitness-coach-website-template-dark-delta.vercel.app/"
     }
   ];
 
