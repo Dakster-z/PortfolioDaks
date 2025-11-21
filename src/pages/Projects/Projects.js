@@ -16,7 +16,7 @@ function Projects() {
   // Enhanced project data with creative agency features
   const projectsData = [
     {
-      imgPath: "/og-banner.svg",
+      imgPath: "https://s.wordpress.com/mshots/v1/https://dynamic-triplan.vercel.app/",
       title: "Dynamic TriPlan",
       category: "Travel & Booking",
       clientType: "Agency",
@@ -259,7 +259,7 @@ function Projects() {
       demoLink: "https://hotel-daksster.vercel.app/"
     },
     {
-      imgPath: "/og-banner.svg",
+      imgPath: "https://s.wordpress.com/mshots/v1/https://fitness-coach-website-template-dark-delta.vercel.app/",
       title: "Fitness Coach Website",
       category: "Health & Fitness",
       clientType: "Coach",
