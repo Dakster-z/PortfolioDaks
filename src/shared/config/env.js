@@ -1,7 +1,7 @@
 // Centralized access to client-side environment variables (CRA requires REACT_APP_ prefix)
 
 export const env = {
-  whatsappPhone: process.env.REACT_APP_WHATSAPP_PHONE || "",
+  whatsappPhone: process.env.REACT_APP_WHATSAPP_PHONE || "+212620001002",
   schedulerUrl: process.env.REACT_APP_SCHEDULER_URL || "",
 };
 

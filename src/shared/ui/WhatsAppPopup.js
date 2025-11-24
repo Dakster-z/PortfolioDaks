@@ -5,7 +5,7 @@ import { env, whatsappLink } from "../config/env";
 function WhatsAppPopup() {
   const [open, setOpen] = useState(false);
   const phoneSet = Boolean(env.whatsappPhone);
-  const link = phoneSet ? whatsappLink("Hello! I'd like to chat.") : "";
+  const link = phoneSet ? whatsappLink("Bonjour! Je souhaite discuter d’un projet.") : "";
 
   return (
     <div>
@@ -77,7 +77,7 @@ function WhatsAppPopup() {
                   fontWeight: 600,
                 }}
               >
-                Open WhatsApp
+                WhatsApp: +212 620 001 002
               </a>
             ) : (
               <span
