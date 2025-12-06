@@ -12,6 +12,7 @@ import salty from "../../Assets/Projects/salty.png";
 import tasty from "../../Assets/Projects/tasty.png";
 import hotel from "../../Assets/Projects/hotel.png";
 import laser from "../../Assets/Projects/laser.png";
+import mouton from "../../Assets/Projects/mouton-noir-card.png";
 function Projects() {
   // Enhanced project data with creative agency features
   const projectsData = [
@@ -43,6 +44,33 @@ function Projects() {
       ],
       ghLink: "https://github.com/Dakster-z/dynamic-triplan",
       demoLink: "https://dynamic-triplan.vercel.app/"
+    },
+    {
+      imgPath: mouton,
+      title: "Refonte web Mouton Noir – La Fusion Montréal-Marrakech",
+      category: "Restauration",
+      clientType: "Client",
+      featured: false,
+      description: "Site vitrine immersif et minimaliste mettant en valeur les visuels et l'ambiance \"Good food, good people\".",
+      detailedDescription: "Clarification de l’offre des deux adresses (Cantine à Guéliz et Club House au Golf Akenza) avec une expérience cohérente et mobile-first.",
+      technologies: ["Design System", "React", "Bootstrap"],
+      metrics: {
+        timeline: "5 weeks",
+        teamSize: 2
+      },
+      challenge: "Refléter l’évolution de l’institution avec l’ouverture d’un second lieu tout en préservant l’âme urbaine de la Cantine et clarifier l’offre des deux adresses.",
+      solution: "Un site vitrine immersif et minimaliste laissant la part belle aux visuels (food appeal), avec une présentation claire des deux ambiances (Cantine vs Club House).",
+      process: [
+        { title: "Research", description: "Cartographie des besoins et de la dualité des lieux." },
+        { title: "Design", description: "Identité épurée inspirée des codes du diner moderne, noir & blanc." },
+        { title: "Build", description: "Implémentation mobile-first avec accès rapide au menu et à la localisation." }
+      ],
+      results: [
+        { value: "Mobile First", label: "Expérience optimisée" },
+        { value: "Dualité clarifiée", label: "Cantine vs Club House" }
+      ],
+      ghLink: "",
+      demoLink: "https://moutonnoirmarrakech.com/"
     },
     {
       imgPath: grilli,
