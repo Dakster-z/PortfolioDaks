@@ -20,11 +20,10 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className={styles.homeAboutBody}>
-            I’ve developed a passion for programming, mastering languages like Java, JavaScript, and PHP...
-              <br />
-              <br />I am fluent in classics like
+I am not a ‘freelancer looking for clients’             <br />
+              <br />I am a digital problem solver who 
               <i>
-                <b className="purple"> C++, Javascript and Go. </b>
+                <b className="purple"> builds systems that make businesses money.  </b>
               </i>
               <br />
               <br />
@@ -38,17 +37,19 @@ function Home2() {
               </i>
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
+            
+              My value is not in code — it’s in <b className="purple">impact</b> and
               <i>
                 <b className="purple">
                   {" "}
-                  Modern Javascript Library and Frameworks
+                  I finish what I start. I ship. I iterate. I evolve.
+I don’t chase motivation .
                 </b>
               </i>
-              &nbsp; like
               <i>
-                <b className="purple"> React.js and Next.js</b>
+                <b className="purple"> Every client becomes a case study.
+Every skill becomes leverage.
+</b>
               </i>
             </p>
           </Col>
