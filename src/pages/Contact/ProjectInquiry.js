@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { EMAILJS } from "../../shared/config/env";
 import { Container, Row, Col, Form, Button, Card, Alert, Badge, ProgressBar } from "react-bootstrap";
 import Particle from "../../shared/effects/Particle";
-import { FaUser, FaEnvelope, FaPhone, FaBuilding, FaProjectDiagram, FaPalette, FaCalendarAlt, FaDollarSign, FaLightbulb, FaFileUpload, FaCheckCircle } from "react-icons/fa";
+import { FaUser, FaEnvelope, FaPhone, FaProjectDiagram, FaPalette, FaCalendarAlt, FaLightbulb, FaCheckCircle } from "react-icons/fa";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import "./ProjectInquiry.css";
 

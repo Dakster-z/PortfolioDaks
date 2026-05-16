@@ -12,6 +12,7 @@ import salty from "../../Assets/Projects/salty.png";
 import tasty from "../../Assets/Projects/tasty.png";
 import hotel from "../../Assets/Projects/hotel.png";
 import laser from "../../Assets/Projects/laser.png";
+import SEO from '../../shared/seo/SEO';
 function Projects() {
   // Enhanced project data with creative agency features
   const projectsData = [
@@ -290,6 +291,8 @@ function Projects() {
   ];
 
   return (
+  <React.Fragment>
+      <SEO title="Projects – Portfolio" description="Showcase of recent projects with details, tech stack, and results." />
     <Container fluid className="project-section">
       <Particle />
       <Container>
@@ -350,7 +353,7 @@ function Projects() {
                 </Col>
                 <Col md={3} className="text-center">
                   <div className="stat-item">
-                    <h2 style={{ color: "#c770f0" }}>98%</h2>
+                    <h2 style={{ color: "#2ecc71" }}>98%</h2>
                     <p style={{ color: "white" }}>Client Satisfaction</p>
                   </div>
                 </Col>
@@ -364,8 +367,17 @@ function Projects() {
             </div>
           </Col>
         </Row>
+        {/* Privacy & Compliance Note */}
+        <Row className="mt-3">
+          <Col md={12} className="text-center">
+            <p style={{ color: "#aaa", fontSize: "0.9rem" }}>
+              All medical projects are built with HIPAA‑compliant data handling and secure hosting.
+            </p>
+          </Col>
+        </Row>
       </Container>
     </Container>
+    </React.Fragment>
   );
 }
 

@@ -4,7 +4,6 @@ import Navbar from "./layouts/Navbar";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import Footer from "./layouts/Footer";
-// import Resume from "./pages/Resume/ResumeNew"; // Temporarily hidden
 import Skills from "./pages/Skills/Skills";
 import CaseStudy from "./pages/Projects/CaseStudy";
 import ProjectInquiry from "./pages/Contact/ProjectInquiry";
@@ -22,11 +21,11 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [load, upadateLoad] = useState(true);
+  const [load, updateLoad] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      upadateLoad(false);
+      updateLoad(false);
     }, 1200);
 
     return () => clearTimeout(timer);
@@ -43,9 +42,7 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<ProjectInquiry />} />
-          {/** Resume route temporarily disabled */}
-          {/** <Route path="/resume" element={<Resume />} /> */}
-          <Route path="/case-study/:id" element={<CaseStudy />} />
+                  <Route path="/case-study/:id" element={<CaseStudy />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <WhatsAppPopup />

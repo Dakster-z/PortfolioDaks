@@ -384,6 +384,20 @@ function CaseStudy() {
         </Row>
 
         {/* CTA Section */}
+
+                {/* Before / After Comparison */}
+                <Row className="before-after-section">
+                  <Col md={12}>
+                    <h2 className="section-title">Before / After</h2>
+                  </Col>
+                  {project.gallery.slice(0,2).map((img, idx) => (
+                    <Col md={6} key={idx}>
+                      <img src={img} alt={idx===0?"Before" : "After"} className="before-after-img" />
+                    </Col>
+                  ))}
+                </Row>
+
+
         <Row className="cta-section">
           <Col md={12} className="text-center">
             <h3>Ready to Start Your Project?</h3>

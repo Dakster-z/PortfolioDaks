@@ -18,7 +18,7 @@ html {
   color: var(--imp-text-color) !important;
 }
 
-button:focus {
+button:focus, a:focus, .primaryCTA:focus {
   box-shadow: none !important;
 }
 
@@ -399,6 +399,34 @@ button:focus {
 }
 
 /* --------- */
+/* Global interactive element styles */
+
+/* Transition for all interactive elements */
+button,
+ a,
+ .primaryCTA,
+ .overlayBtn {
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effects */
+button:hover,
+ a:hover,
+ .primaryCTA:hover,
+ .overlayBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(199,112,240,0.3);
+}
+
+/* Focus outlines for accessibility */
+button:focus-visible,
+ a:focus-visible,
+ .primaryCTA:focus-visible,
+ .overlayBtn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 /* Footer */
 /* --------- */
 .footer {

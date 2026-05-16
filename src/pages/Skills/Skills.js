@@ -4,6 +4,7 @@ import { FaCode, FaPalette, FaServer, FaDatabase } from 'react-icons/fa';
 import './Skills.css';
 import styles from './Skills.module.css';
 
+import SEO from '../../shared/seo/SEO';
 function Skills() {
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -78,6 +79,8 @@ function Skills() {
   };
 
   return (
+  <React.Fragment>
+    <SEO title="Skills – Portfolio" description="Showcase of technical expertise and skill set." />
     <Container fluid className={styles.skillsSection}>
       <Container className={styles.sectionContainer}>
         <Row>
@@ -133,18 +136,18 @@ function Skills() {
         <Modal.Header closeButton className={styles.modalHeader}>
           <Modal.Title className={styles.modalTitle}>
             {selectedSkill && (
-              <>
+              <React.Fragment>
                 <span style={{ color: selectedSkill.color }}>
                   {selectedSkill.icon}
                 </span>
                 {' '}{selectedSkill.title}
-              </>
+              </React.Fragment>
             )}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className={styles.modalBody}>
           {selectedSkill && (
-            <>
+            <React.Fragment>
               <p className="mb-4">{selectedSkill.description}</p>
               <Row>
                 {selectedSkill.skills.map((skill, index) => (
@@ -169,7 +172,7 @@ function Skills() {
                   </Col>
                 ))}
               </Row>
-            </>
+            </React.Fragment>
           )}
         </Modal.Body>
         <Modal.Footer>
@@ -179,6 +182,7 @@ function Skills() {
         </Modal.Footer>
       </Modal>
     </Container>
+    </React.Fragment>
   );
 }
 

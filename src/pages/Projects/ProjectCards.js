@@ -56,6 +56,9 @@ function ProjectCards(props) {
                 {props.clientType}
               </Badge>
             )}
+            {props.clientType && (props.clientType.toLowerCase().includes('medical') || props.clientType.toLowerCase().includes('clinic')) && (
+              <Badge bg="success" className={styles.trustBadge}>HIPAA ✔</Badge>
+            )}
           </div>
           
           <Card.Text style={{ textAlign: "justify" }}>
@@ -98,7 +101,7 @@ function ProjectCards(props) {
           )}
 
           <div className={styles.cardActions}>
-            <Button variant="primary" href={props.ghLink} target="_blank">
+            <Button variant="primary" href={props.ghLink} target="_blank" className="primaryCTA" aria-label={`Open GitHub repo for ${props.title}`}>
               <BsGithub /> &nbsp;
               {props.isBlog ? "Blog" : "GitHub"}
             </Button>

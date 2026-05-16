@@ -1,4 +1,22 @@
 /* Enhanced Project Cards Styles (CSS Modules) */
+
+/* Primary CTA styling */
+.primaryCTA {
+  background-color: #008080 !important; /* teal */
+  border-color: #008080 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.primaryCTA:hover {
+  transform: translateY(-2px);
+  background-color: #009999 !important;
+}
+
+/* Focus ring for interactive elements */
+button:focus, a:focus {
+  outline: 2px solid #ff9800;
+  outline-offset: 2px;
+}
+
 .enhancedCard {
   transition: all 0.3s ease;
   border: none;
