@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -16,12 +16,15 @@ import {
 import { CgFileDocument } from "react-icons/cg";
 import { BsSun, BsMoon } from "react-icons/bs";
 import { toggleTheme } from "../shared/ui/theme";
-import { env } from "../shared/config/env";
+import { env, whatsappLink } from "../shared/config/env";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
   const [theme, setTheme] = useState(document.documentElement.getAttribute('data-theme') || 'light');
+  const bookCallHref =
+    env.schedulerUrl || whatsappLink("Bonjour! Je souhaite reserver un appel.");
+  const bookCallExternal = /^https?:\/\//.test(bookCallHref);
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -31,7 +34,13 @@ function NavBar() {
     }
   }
 
-  window.addEventListener("scroll", scrollHandler);
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
 
   const handleToggleTheme = () => {
     const next = toggleTheme();
@@ -144,8 +153,9 @@ function NavBar() {
 
             <Nav.Item>
               <Button
-                href={env.schedulerUrl || "/contact"}
-                target={env.schedulerUrl ? "_blank" : undefined}
+                href={bookCallHref}
+                target={bookCallExternal ? "_blank" : undefined}
+                rel={bookCallExternal ? "noreferrer" : undefined}
                 className="ms-2"
                 variant="success"
               >

@@ -406,7 +406,7 @@ function CaseStudy() {
               variant="primary" 
               size="lg" 
               className="cta-btn"
-              onClick={() => navigate('/inquiry')}
+              onClick={() => navigate('/contact')}
             >
               Start Your Project <BsArrowRight />
             </Button>
