@@ -58,7 +58,7 @@ function WhatsAppPopup() {
             </button>
           </div>
           <p style={{ marginTop: 8, marginBottom: 12 }}>
-            {phoneSet ? "Click to start a chat on WhatsApp." : "Set REACT_APP_WHATSAPP_PHONE in .env."}
+            {phoneSet ? "Click to start a chat on WhatsApp." : "WhatsApp contact is currently unavailable."}
           </p>
           <div style={{ display: "flex", gap: 8 }}>
             {phoneSet ? (

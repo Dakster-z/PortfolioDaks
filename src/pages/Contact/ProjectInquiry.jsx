@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { EMAILJS } from "../../shared/config/env";
+import { useState } from "react";
+import { EMAILJS, isEmailJsConfigured, whatsappLink } from "../../shared/config/env";
 import { Container, Row, Col, Form, Button, Card, Alert, Badge, ProgressBar } from "react-bootstrap";
 import Particle from "../../shared/effects/Particle";
 import { FaUser, FaEnvelope, FaPhone, FaProjectDiagram, FaPalette, FaCalendarAlt, FaLightbulb, FaCheckCircle } from "react-icons/fa";
@@ -196,6 +196,29 @@ function ProjectInquiry() {
         communication_preference: formData.communicationPreference,
         hear_about_us: formData.hearAboutUs,
       };
+      if (!isEmailJsConfigured) {
+        const whatsappMessage = [
+          "Bonjour! Je souhaite vous envoyer un brief de projet.",
+          `Nom: ${formData.name || "-"}`,
+          `Email: ${formData.email || "-"}`,
+          `Entreprise: ${formData.company || "-"}`,
+          `Type de projet: ${formData.projectType || "-"}`,
+          `Titre: ${formData.projectTitle || "-"}`,
+          `Description: ${formData.projectDescription || "-"}`,
+          `Timeline: ${formData.timeline || "-"}`,
+          `Budget: ${formData.budget || "-"}`,
+        ].join("\n");
+        const fallbackLink = whatsappLink(whatsappMessage);
+        if (!fallbackLink) {
+          throw new Error("No contact fallback configured");
+        }
+        window.open(fallbackLink, "_blank", "noopener,noreferrer");
+        setAlertType("success");
+        setAlertMessage("Email is not configured yet, so your inquiry was redirected to WhatsApp.");
+        setShowAlert(true);
+        setTimeout(() => setShowAlert(false), 5000);
+        return;
+      }
       const payload = {
         service_id: EMAILJS.serviceId,
         template_id: EMAILJS.templateId,
@@ -625,6 +648,11 @@ function ProjectInquiry() {
             <p className="inquiry-subtitle">
               Let's bring your creative vision to life. Fill out our comprehensive brief to get started.
             </p>
+            {!isEmailJsConfigured && (
+              <Alert variant="info" className="mt-3">
+                Email submission is not configured in this environment yet. Submitting this form will continue on WhatsApp instead.
+              </Alert>
+            )}
           </Col>
         </Row>
 

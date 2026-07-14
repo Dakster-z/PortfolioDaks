@@ -1,8 +1,10 @@
 // Centralized access to client-side environment variables (CRA requires REACT_APP_ prefix)
 
+const DEFAULT_WHATSAPP_PHONE = "+212620001002";
+
 export const env = {
-  whatsappPhone: process.env.REACT_APP_WHATSAPP_PHONE || "+212620001002",
-  schedulerUrl: process.env.REACT_APP_SCHEDULER_URL || "",
+  whatsappPhone: (process.env.REACT_APP_WHATSAPP_PHONE || DEFAULT_WHATSAPP_PHONE).trim(),
+  schedulerUrl: (process.env.REACT_APP_SCHEDULER_URL || "").trim(),
 };
 
 export const whatsappLink = (message = "") => {
@@ -19,6 +21,10 @@ export const EMAILJS = {
   templateId: process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "",
   publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "",
 };
+
+export const isEmailJsConfigured = Boolean(
+  EMAILJS.serviceId && EMAILJS.templateId && EMAILJS.publicKey
+);
 
 export const ANALYTICS = {
   writeKey: process.env.REACT_APP_ANALYTICS_WRITE_KEY || "",
