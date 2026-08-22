@@ -12,7 +12,7 @@ function Skills() {
   const skillCategories = [
     {
       id: 1,
-      title: "Frontend Development",
+      title: "Developpement front-end",
       icon: <FaCode />,
       color: "#61dafb",
       skills: [
@@ -22,11 +22,11 @@ function Skills() {
         { name: "Bootstrap/Tailwind", level: 85, experience: "2+ years", projects: 12 },
         { name: "TypeScript", level: 80, experience: "2+ years", projects: 8 }
       ],
-      description: "Creating responsive, interactive user interfaces with modern frameworks and best practices."
+      description: "Interfaces responsives et interactives avec des frameworks modernes et une attention particuliere a l'experience utilisateur."
     },
     {
       id: 2,
-      title: "Backend Development",
+      title: "Developpement back-end",
       icon: <FaServer />,
       color: "#68d391",
       skills: [
@@ -36,11 +36,11 @@ function Skills() {
         { name: "RESTful APIs", level: 90, experience: "3+ years", projects: 15 },
         { name: "GraphQL", level: 70, experience: "1+ year", projects: 5 }
       ],
-      description: "Building scalable server-side applications and robust API architectures."
+      description: "Applications serveur evolutives, integrations API et bases solides pour des parcours fiables."
     },
     {
       id: 3,
-      title: "Database & Cloud",
+      title: "Base de donnees & cloud",
       icon: <FaDatabase />,
       color: "#f6ad55",
       skills: [
@@ -50,7 +50,7 @@ function Skills() {
         { name: "Firebase", level: 85, experience: "2+ years", projects: 12 },
         { name: "Docker", level: 70, experience: "1+ year", projects: 4 }
       ],
-      description: "Managing data storage solutions and cloud infrastructure deployment."
+      description: "Stockage de donnees, deploiement cloud et architecture technique orientee performance."
     },
     {
       id: 4,
@@ -64,7 +64,7 @@ function Skills() {
         { name: "Responsive Design", level: 95, experience: "4+ years", projects: 25 },
         { name: "User Research", level: 70, experience: "2+ years", projects: 10 }
       ],
-      description: "Creating intuitive user experiences with modern design principles and user-centered approach."
+      description: "Interfaces claires, hierarchie visuelle forte et approche centree utilisateur."
     }
   ];
 
@@ -80,16 +80,16 @@ function Skills() {
 
   return (
   <React.Fragment>
-    <SEO title="Skills – Portfolio" description="Showcase of technical expertise and skill set." />
+    <SEO title="Competences – Portfolio" description="Vue d'ensemble des competences techniques, outils et expertises." />
     <Container fluid className={styles.skillsSection}>
       <Container className={styles.sectionContainer}>
         <Row>
           <Col md={12} className="text-center">
             <h1 className={styles.skillsHeading}>
-               My <strong className="purple">Expertise</strong>
+               Mes <strong className="purple">competences</strong>
              </h1>
             <p className={styles.skillsDescription}>
-               A comprehensive overview of my technical skills, experience, and capabilities as a full-stack developer and designer.
+               Une vue d'ensemble de mes expertises techniques en developpement, design d'interface et automatisation.
              </p>
           </Col>
         </Row>
@@ -116,7 +116,7 @@ function Skills() {
                     className={`${styles.skillCount} mt-auto`}
                     style={{ backgroundColor: category.color }}
                   >
-                    {category.skills.length} Skills
+                    {category.skills.length} competences
                   </Badge>
                 </Card.Body>
               </Card>
@@ -159,7 +159,7 @@ function Skills() {
                           {skill.experience}
                         </Badge>
                         <Badge variant="outline-success">
-                          {skill.projects} projects
+                          {skill.projects} projets
                         </Badge>
                       </div>
                     </div>
@@ -177,7 +177,7 @@ function Skills() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Fermer
           </Button>
         </Modal.Footer>
       </Modal>

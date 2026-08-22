@@ -4,9 +4,9 @@ import Navbar from "./layouts/Navbar";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import Footer from "./layouts/Footer";
-import Skills from "./pages/Skills/Skills";
 import CaseStudy from "./pages/Projects/CaseStudy";
 import ProjectInquiry from "./pages/Contact/ProjectInquiry";
+import Ugc from "./pages/UGC/Ugc";
 import BackToTop from "./shared/ui/BackToTop";
 import WhatsAppPopup from "./shared/ui/WhatsAppPopup";
 import {
@@ -40,8 +40,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
-          <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<ProjectInquiry />} />
+            <Route path="/ugc" element={<Ugc />} />
                   <Route path="/case-study/:id" element={<CaseStudy />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>

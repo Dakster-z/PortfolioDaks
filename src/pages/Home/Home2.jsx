@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
@@ -17,38 +16,36 @@ function Home2() {
         <Row>
           <Col md={8} className={styles.homeAboutDescription}>
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              A <span className="purple"> PROPOS </span> DE MOI
             </h1>
             <p className={styles.homeAboutBody}>
-I am not a ‘freelancer looking for clients’             <br />
-              <br />I am a digital problem solver who 
+Je ne me presente pas seulement comme un freelance.             <br />
+              <br />Je construis des experiences digitales qui aident les entreprises a mieux vendre, mieux expliquer leur offre et gagner du temps.
               <i>
-                <b className="purple"> builds systems that make businesses money.  </b>
+                <b className="purple"> Mon approche melange design, performance et automatisation utile.  </b>
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              Mes domaines d'expertise couvrent la creation de &nbsp;
               <i>
-                <b className="purple">Web applications, enhancing user experience, and exploring AI and cloud technologies. </b> and
-                also in areas related to{" "}
+                <b className="purple">sites vitrines, applications web, experiences utilisateur plus fluides et integrations IA concretes. </b> ainsi que
+                des sujets lies au{" "}
                 <b className="purple">
-                  Blockchain.
+                  cloud et a l'automatisation.
                 </b>
               </i>
               <br />
               <br />
             
-              My value is not in code — it’s in <b className="purple">impact</b> and
+              Ma valeur ne se limite pas au code : elle se mesure a l'<b className="purple">impact</b>, a la clarte du message et a la qualite d'execution.
               <i>
                 <b className="purple">
                   {" "}
-                  I finish what I start. I ship. I iterate. I evolve.
-I don’t chase motivation .
+                  Je livre, j'itere et j'ameliore chaque projet avec exigence.
                 </b>
               </i>
               <i>
-                <b className="purple"> Every client becomes a case study.
-Every skill becomes leverage.
+                <b className="purple"> Chaque projet doit etre utile, credible et orienté resultat.
 </b>
               </i>
             </p>
@@ -61,9 +58,9 @@ Every skill becomes leverage.
         </Row>
         <Row>
           <Col md={12} className={styles.homeAboutSocial}>
-            <h1>FIND ME ON</h1>
+            <h1>RETROUVEZ-MOI</h1>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+              N'hesitez pas a <span className="purple">me contacter </span>ou a suivre mon travail
             </p>
             <ul className={styles.homeAboutSocialLinks}>
               <li className="social-icons">

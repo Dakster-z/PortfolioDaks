@@ -1,162 +1,99 @@
-import React from "react";
-import { Container, Row, Col, Carousel } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../../shared/effects/Particle";
 import Home2 from "./Home2";
-import Type from "./Type";
 import styles from "./Home.module.css";
-
+import Services from "../../components/Services/Services";
 import SEO from '../../shared/seo/SEO';
+import { whatsappLink } from '../../shared/config/env';
+
 function Home() {
+  const projectLink = whatsappLink("Bonjour Digitalwebcraft, je voudrais discuter de mon projet.");
 
   return (
     <section>
-      <SEO title="Full‑Stack Developer Portfolio" description="Showcase of full‑stack web & AI projects, services, and contact information." />
+      <SEO title="Portfolio developpement web et IA" description="Portfolio de projets web et IA, services digitaux et prise de contact." />
       <Container fluid className={styles.homeSection} id="home">
         <Particle />
         <Container className={`home-content ${styles.homeContent}`}>
           <Row className="align-items-center" style={{ minHeight: "80vh" }}>
-            <Col md={7} className={styles.homeHeader} style={{ 
-              paddingRight: "30px",
-              paddingLeft: "20px"
-            }}>
+            <Col md={7} className={styles.homeHeader} style={{ paddingRight: "30px", paddingLeft: "20px" }}>
               <div style={{ maxWidth: "100%", margin: "0 auto" }}>
-                <h1 style={{ paddingBottom: 15 }} className={styles.heading}>
-                  Full-Stack Developer{" "}
-                  <span className="wave" role="img" aria-labelledby="wave">
-                    🤖
-                  </span>
-                </h1>
-
-                <h1 className={styles.headingName}>
-                  "Boostez votre business avec 
-                  <strong className={styles.mainName}> des solutions web & IA sur-mesure"</strong>
-                </h1>
-
-                <h2 className="heading-subtitle" style={{ 
-                  fontSize: "1.8em", 
-                  color: "var(--accent)", 
-                  marginBottom: "30px",
-                  marginTop: "20px"
-                }}>
-                  Création d'applications intelligentes qui automatisent, prédisent et font gagner du temps.
-                </h2>
-
-                <p className={styles.homeDescription} style={{ 
-                  fontSize: "1.2em", 
-                  lineHeight: "1.6", 
-                  marginBottom: "40px",
-                  textAlign: "left"
-                }}>
-                  +5 ans d'expertise en développement full-stack & intégration IA de pointe.
+                <p className={styles.eyebrow} style={{ fontSize: "0.85rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "16px", fontWeight: 600 }}>
+                  DIGITALWEBCRAFT · WEB, IA & CONTENU DE CONVERSION
                 </p>
 
-                <div className="skills-grid" style={{ 
-                  display: "grid", 
-                  gridTemplateColumns: "2fr", 
-                  gap: "50px",
-                  marginBottom: "50px",
-                  width: "100%"
-                }}>
-                  <div className="skill" style={{ 
-                    padding: "15px", 
-                    border: "1px solid var(--accent)", 
-                    borderRadius: "10px",
-                    textAlign: "center",
-                    backgroundColor: "rgba(199, 112, 240, 0.05)"
-                  }}>
-                    <span className="icon" style={{ fontSize: "2em" }}>🤖</span>
-                    <h3 style={{ color: "var(--accent)", marginBottom: 10, fontSize: "1.2em" }}>IA sur mesure</h3>
-                    <p style={{ margin: 0, fontSize: "0.95em" }}>Chatbots intelligents, analyse prédictive, assistants automatisés.</p>
-                  </div>
-                  
-                  <div className="skill" style={{ 
-                    padding: "15px", 
-                    border: "1px solid var(--accent)", 
-                    borderRadius: "10px",
-                    textAlign: "center",
-                    backgroundColor: "rgba(199, 112, 240, 0.05)"
-                  }}>
-                    <span className="icon" style={{ fontSize: "2em" }}>💻</span>
-                    <h3 style={{ color: "var(--accent)", marginBottom: 10, fontSize: "1.2em" }}>Développement Web Premium</h3>
-                    <p style={{ margin: 0, fontSize: "0.95em" }}>Sites ultra-rapides et personnalisés pour vos objectifs.</p>
-                  </div>
-                  
-                  <div className="skill" style={{ 
-                    padding: "50px", 
-                    border: "1px solid var(--accent)", 
-                    borderRadius: "10px",
-                    textAlign: "center",
-                    backgroundColor: "rgba(199, 112, 240, 0.05)"
-                  }}>
-                    <span className="icon" style={{ fontSize: "2em" }}>🚀</span>
-                    <h3 style={{ color: "var(--accent)", marginBottom: 10, fontSize: "1.2em" }}>Automatisation Business</h3>
-                    <p style={{ margin: 0, fontSize: "0.95em" }}>Gagnez du temps avec des workflows intelligents et API connectées.</p>
-                  </div>
+                <h1 className={styles.heading} style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.15", marginBottom: "24px", fontWeight: 700 }}>
+                  Des sites web clairs, des automatisations utiles
+                  <br />
+                  et du contenu qui pousse vos prospects à agir.
+                </h1>
+
+                <p className={styles.homeIntro}>
+                  J’aide les entreprises à mieux présenter leur offre, guider leurs demandes et gagner du temps grâce à des sites web sur mesure, des solutions IA ciblées et des Reels de conversion prêts à publier.
+                </p>
+
+                <div className={styles.ctaRow}>
+                  <Button as="a" href="https://wa.me/212620001002?text=Bonjour%20Digitalwebcraft%2C%20je%20souhaite%20discuter%20de%20mon%20projet." target="_blank" rel="noreferrer" className={styles.primaryCta}>
+                    DISCUTER DE MON PROJET
+                  </Button>
+                  <a href="/ugc#projets" className={styles.secondaryCta}>
+                    VOIR LES ÉTUDES DE CAS
+                  </a>
                 </div>
 
-                {/* Tech Stack Section */}
-                <div className="techStackSection" style={{ marginTop: "40px", textAlign: "left" }}>
-                  <h2 className={styles.heading} style={{ color: "var(--accent)" }}>Tech Stack</h2>
-                  <p style={{ marginBottom: "20px", color: "#f8f9fa" }}>
-                    I build with React, Node.js, GraphQL, and modern tooling. React gives a fast, component‑driven UI; Node powers scalable APIs; GraphQL provides efficient data fetching, reducing over‑fetching and improving UX.
-                  </p>
-                  <div className="techBadges" style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
-                    <span className="techBadge" style={{ padding: "5px 10px", background: "rgba(199,112,240,0.1)", borderRadius: "8px" }}>React</span>
-                    <span className="techBadge" style={{ padding: "5px 10px", background: "rgba(199,112,240,0.1)", borderRadius: "8px" }}>Node.js</span>
-                    <span className="techBadge" style={{ padding: "5px 10px", background: "rgba(199,112,240,0.1)", borderRadius: "8px" }}>GraphQL</span>
-                    <span className="techBadge" style={{ padding: "5px 10px", background: "rgba(199,112,240,0.1)", borderRadius: "8px" }}>Express</span>
-                    <span className="techBadge" style={{ padding: "5px 10px", background: "rgba(199,112,240,0.1)", borderRadius: "8px" }}>MongoDB</span>
-                  </div>
+                <div className={styles.servicePills}>
+                  <span>Sites web sur mesure</span>
+                  <span>Automatisation business</span>
+                  <span>IA ciblée</span>
+                  <span>Reels FR / Darija / EN</span>
                 </div>
 
-                {/* Client Testimonials Carousel */}
-                <Carousel interval={8000} controls={true} indicators={false} className="testimonial-carousel" style={{ marginTop: "40px", maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
-                  <Carousel.Item>
-                    <blockquote style={{ fontStyle: "italic", color: "#f8f9fa" }}>
-                      “Amazing work! Our conversion rate jumped by 30 % after the redesign.”
-                    </blockquote>
-                    <p style={{ marginTop: "0.5rem", fontWeight: "bold", color: "#fff" }}>— Alex Rivera, Marketing Lead, TechMart</p>
-                  </Carousel.Item>
-                  <Carousel.Item>
-                    <blockquote style={{ fontStyle: "italic", color: "#f8f9fa" }}>
-                      “The AI chatbot integration saved us hours of support time each week.”
-                    </blockquote>
-                    <p style={{ marginTop: "0.5rem", fontWeight: "bold", color: "#fff" }}>— Maya Patel, Product Manager, InnovateAI</p>
-                  </Carousel.Item>
-                  <Carousel.Item>
-                    <blockquote style={{ fontStyle: "italic", color: "#f8f9fa" }}>
-                      “Highly professional and quick delivery—highly recommend!”
-                    </blockquote>
-                    <p style={{ marginTop: "0.5rem", fontWeight: "bold", color: "#fff" }}>— Samir Khan, CTO, StartupX</p>
-                  </Carousel.Item>
-                </Carousel>
-
-                <div style={{ paddingTop: "20px", textAlign: "left" }}>
-                  <Type />
+                <div className={styles.featureGrid}>
+                  <div className={styles.featureCard}>
+                    <span className="icon" style={{ fontSize: "2em" }}>💬</span>
+                    <h3>Proposition claire</h3>
+                    <p>Une offre intelligible, des CTA visibles et un message orienté vers l'action.</p>
+                  </div>
+                  <div className={styles.featureCard}>
+                    <span className="icon" style={{ fontSize: "2em" }}>⚙️</span>
+                    <h3>Parcours fluide</h3>
+                    <p>Design utile, structure mobile-first et automatisations qui évitent les tâches répétitives.</p>
+                  </div>
+                  <div className={styles.featureCard}>
+                    <span className="icon" style={{ fontSize: "2em" }}>📈</span>
+                    <h3>Contenu de conversion</h3>
+                    <p>Reels, landing pages et messages à fort potentiel d'engagement pour mieux convertir.</p>
+                  </div>
                 </div>
               </div>
             </Col>
 
-            <Col md={5} className="text-center" style={{ 
-              paddingLeft: "30px",
-              paddingRight: "20px",
-              textAlign: "center"
-            }}>
-              <img
-                src={homeLogo}
-                alt="AI Developer"
-                className="img-fluid"
-                style={{ 
-                  maxHeight: "450px",
-                  width: "100%",
-                  height: "auto"
-                }}
-              />
+            <Col md={5} className="text-center" style={{ paddingLeft: "30px", paddingRight: "20px", textAlign: "center" }}>
+              <img src={homeLogo} alt="Developpeur IA" className="img-fluid" style={{ maxHeight: "450px", width: "100%", height: "auto" }} />
             </Col>
           </Row>
         </Container>
       </Container>
+
+      <Services />
+
+      <section id="contact" className={styles.finalCtaSection}>
+        <Container>
+          <div className={styles.finalCtaCard}>
+            <p className={styles.eyebrow}>PRÊT À FAIRE MIEUX ?</p>
+            <h2>Votre site doit aider votre activité à vendre, pas seulement à exister.</h2>
+            <p>Je vous aide à clarifier votre proposition, améliorer votre présence digitale et mettre en place les automatismes utiles.</p>
+            <div className={styles.ctaRow}>
+              <Button as="a" href={projectLink} target="_blank" rel="noreferrer" className={styles.primaryCta}>
+                DM AUDIT
+              </Button>
+              <a href="/contact" className={styles.secondaryCta}>REMPLIR LE BRIEF</a>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <Home2 />
     </section>
   );

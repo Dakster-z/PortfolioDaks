@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../../shared/effects/Particle";
 import grilli from "../../Assets/Projects/grilli.png";
 import immersivest from "../../Assets/Projects/immersivest.png";
 import digitweb from "../../Assets/Projects/digitweb.png";
@@ -13,20 +12,20 @@ import tasty from "../../Assets/Projects/tasty.png";
 import hotel from "../../Assets/Projects/hotel.png";
 import laser from "../../Assets/Projects/laser.png";
 import SEO from '../../shared/seo/SEO';
+import styles from './ProjectCards.module.css';
 function Projects() {
   // Enhanced project data with creative agency features
   const projectsData = [
     {
       imgPath: "https://s.wordpress.com/mshots/v1/https://dynamic-triplan.vercel.app/",
       title: "Dynamic TriPlan",
-      category: "Travel & Booking",
-      clientType: "Agency",
+      category: "Voyage & reservation",
+      clientType: "Agence",
       featured: true,
       description: "Plateforme de voyages et teambuilding avec parcours dynamiques, CTA clairs et pages programmes — optimisée pour la conversion.",
       detailedDescription: "Site moderne qui présente des offres de voyages en groupe, activités express et teambuilding avec filtrage et pages dédiées. Mise en avant d'un héros fort (JUST MOVE) et call-to-actions persistants.",
       technologies: ["Next.js", "Tailwind CSS"],
       metrics: {
-        roi: 140,
         timeline: "4 weeks",
         teamSize: 3
       },
@@ -48,41 +47,40 @@ function Projects() {
     {
       imgPath: grilli,
       title: "Grilli Restaurant",
-      category: "Web Development",
+      category: "Developpement web",
       clientType: "Restaurant",
       featured: true,
-      description: "Grilli is a dynamic showcase website designed for a grill restaurant. The site highlights the restaurant's mouth-watering dishes, featuring high-quality visuals and an intuitive layout.",
-      detailedDescription: "A comprehensive restaurant website featuring online reservations, menu showcase, and customer testimonials. Built with modern web technologies to provide an exceptional user experience.",
+      description: "Site vitrine pour un restaurant grill avec visuels immersifs, menu mis en avant et parcours de reservation simplifie.",
+      detailedDescription: "Un site restaurant concu pour presenter la carte, faciliter la reservation et renforcer la desirabilite de la marque sur mobile.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       metrics: {
-        roi: 150,
         timeline: "6 weeks",
         teamSize: 3
       },
-      challenge: "The restaurant needed a modern online presence to attract customers and streamline reservations.",
-      solution: "We created a visually stunning website with integrated booking system and mobile-optimized design.",
+      challenge: "Le restaurant avait besoin d'une presence digitale plus actuelle pour mieux presenter son univers et fluidifier les reservations.",
+      solution: "Creation d'un site visuel avec reservation integree, sections claires et experience mobile optimisee.",
       process: [
         {
-          title: "Discovery & Research",
-          description: "Analyzed target audience and competitor landscape to define project requirements."
+          title: "Analyse",
+          description: "Etude de la cible, du positionnement et des attentes autour du parcours de reservation."
         },
         {
-          title: "Design & Prototyping",
-          description: "Created wireframes and high-fidelity mockups focusing on visual appeal and usability."
+          title: "Design",
+          description: "Maquettes et hierarchie visuelle pensées pour donner envie et guider l'utilisateur."
         },
         {
-          title: "Development & Integration",
-          description: "Built responsive website with booking system and payment integration."
+          title: "Developpement",
+          description: "Implementation responsive avec reservation et sections de conversion bien visibles."
         },
         {
-          title: "Testing & Launch",
-          description: "Comprehensive testing across devices and browsers before successful launch."
+          title: "Tests & mise en ligne",
+          description: "Validation multi-supports avant lancement."
         }
       ],
       results: [
-        { value: "300%", label: "Increase in Online Bookings" },
-        { value: "85%", label: "Mobile Traffic" },
-        { value: "4.8/5", label: "Customer Rating" }
+        { value: "Booking flow", label: "Parcours de reservation" },
+        { value: "Mobile-first", label: "Experience adaptee" },
+        { value: "CTA clairs", label: "Orientation conversion" }
       ],
       ghLink: "https://github.com/Dakster-z/grilli",
       demoLink: "https://grilli-qf5j.vercel.app/"
@@ -90,37 +88,36 @@ function Projects() {
     {
       imgPath: immersivest,
       title: "Immersive Story Site",
-      category: "AR/VR Development",
-      clientType: "Technology",
+      category: "Experience immersive",
+      clientType: "Tech",
       featured: false,
       description: "Une plateforme moderne dédiée à la technologie holographique avancée. Le site présente des solutions de réalité augmentée avec un design futuriste.",
-      detailedDescription: "A cutting-edge platform showcasing holographic technology with immersive 3D elements and interactive demonstrations.",
+      detailedDescription: "Prototype immersif mettant en avant une technologie holographique via des elements 3D et des demonstrations interactives.",
       technologies: ["Three.js", "WebGL", "React", "GSAP"],
       metrics: {
-        roi: 200,
         timeline: "8 weeks",
         teamSize: 4
       },
-      challenge: "Creating an immersive web experience that showcases advanced AR/VR technology capabilities.",
-      solution: "Developed a futuristic interface with 3D elements and interactive demos to engage users.",
+      challenge: "Concevoir une experience web immersive capable de valoriser une technologie innovante.",
+      solution: "Interface futuriste, animations fluides et demos interactives pour illustrer la proposition de valeur.",
       process: [
         {
-          title: "Concept Development",
-          description: "Defined the futuristic aesthetic and interactive elements for the platform."
+          title: "Concept",
+          description: "Definition de la direction artistique et des interactions."
         },
         {
-          title: "3D Modeling & Animation",
-          description: "Created immersive 3D models and animations using advanced web technologies."
+          title: "3D & animation",
+          description: "Creation des scenes, transitions et mouvements immersifs."
         },
         {
-          title: "Interactive Integration",
-          description: "Implemented interactive demos and smooth animations for user engagement."
+          title: "Integration interactive",
+          description: "Mise en place des demonstrations interactives et optimisations d'animation."
         }
       ],
       results: [
-        { value: "500%", label: "User Engagement" },
-        { value: "92%", label: "Demo Completion Rate" },
-        { value: "15min", label: "Average Session Time" }
+        { value: "Demo project", label: "Prototype immersif" },
+        { value: "Concept design", label: "Direction visuelle" },
+        { value: "Interactive demo", label: "Experience exploratoire" }
       ],
       ghLink: "Privé sur demande",
       demoLink: "https://immersive-story-site.vercel.app/"
@@ -128,51 +125,48 @@ function Projects() {
     {
       imgPath: digitweb,
       title: "AI Digital Craft Shine",
-      category: "Digital Agency",
-      clientType: "Agency",
+      category: "Agence digitale",
+      clientType: "Agence",
       featured: true,
       description: "Un site vitrine professionnel pour une agence de développement web spécialisée dans les solutions haut de gamme.",
-      detailedDescription: "A professional showcase website for a premium web development agency specializing in AI-powered solutions and high-end digital experiences.",
+      detailedDescription: "Site vitrine premium pour une agence web mettant en avant son savoir-faire technique et ses offres a forte valeur.",
       technologies: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
       metrics: {
-        roi: 180,
         timeline: "10 weeks",
         teamSize: 5
       },
-      challenge: "Creating a premium brand presence that showcases technical expertise and attracts high-value clients.",
-      solution: "Developed a sophisticated website with interactive elements and case study presentations.",
+      challenge: "Installer une presence premium qui rend le savoir-faire plus lisible et plus credible.",
+      solution: "Site sophistique avec presentations de projets, sections de services et CTA clairs.",
       ghLink: "Privé sur demande",
       demoLink: "https://digital-craft-shine.vercel.app/"
     },
     {
       imgPath: laser,
       title: "Laser Center",
-      category: "Clinic",
-      clientType: "Agency",
+      category: "Clinique",
+      clientType: "Agence",
       featured: true,
       description: "Un site vitrine professionnel pour un centre de laser et de services haut de gamme.",
       detailedDescription: ".",
       technologies: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
       metrics: {
-        roi: 180,
         timeline: "4 weeks",
         teamSize: 5
       },
-      challenge: "Creating a premium brand presence that showcases technical expertise and attracts high-value clients.",
-      solution: "Developed a sophisticated website with interactive elements and case study presentations.",
+      challenge: "Donner une image plus premium au centre tout en facilitant la prise de contact.",
+      solution: "Creation d'un site clair, rassurant et oriente prise de rendez-vous.",
       ghLink: "https://github.com/Dakster-z/laser-clinic-website.git",
       demoLink: "https://laser-clinic-website.vercel.app/"
     },
     {
       imgPath: cabinetden,
       title: "Dental Clinic",
-      category: "Healthcare",
+      category: "Sante",
       clientType: "Medical",
       featured: false,
       description: "Site vitrine moderne pour une clinique dentaire, présentant les services, l'équipe médicale, les témoignages patients et un formulaire de prise de rendez-vous en ligne.",
       technologies: ["React", "Bootstrap", "Node.js"],
       metrics: {
-        roi: 120,
         timeline: "4 weeks",
         teamSize: 2
       },
@@ -182,29 +176,32 @@ function Projects() {
     {
       imgPath: mockupai,
       title: "AI Chatbot pour e-commerce",
-      category: "AI Development",
+      category: "Developpement IA",
       clientType: "E-commerce",
       featured: false,
       description: "Une boutique en ligne avait trop de demandes clients (livraison, retours, produits). Solution : Chatbot IA intégré 24/7 capable de répondre aux FAQ.",
       technologies: ["OpenAI API", "Node.js", "React", "Firebase"],
       metrics: {
-        roi: 250,
         timeline: "12 weeks",
         teamSize: 4
       },
+      results: [
+        { value: "Automatisation FAQ", label: "Support 24/7" },
+        { value: "Parcours client", label: "Reponses rapides" },
+        { value: "Demo project", label: "Integration IA" }
+      ],
       ghLink: "",
       demoLink: ""
     },
     {
       imgPath: oblawf,
       title: "O&B Law Firm",
-      category: "Legal Services",
-      clientType: "Legal",
+      category: "Services juridiques",
+      clientType: "Juridique",
       featured: false,
-      description: "O&B Law Firm is a professional website designed to represent a law firm's services. The site features a clean and sophisticated design.",
+      description: "Site professionnel pour un cabinet d'avocats avec structure sobre, navigation claire et presentation rassurante des services.",
       technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
       metrics: {
-        roi: 90,
         timeline: "5 weeks",
         teamSize: 2
       },
@@ -214,45 +211,52 @@ function Projects() {
     {
       imgPath: salty,
       title: "Daks Sushi",
-      category: "Web Development",
+      category: "Developpement web",
       clientType: "Restaurant",
       featured: false,
-      description: "Daks Sushi is a vibrant and visually appealing website created for a sushi restaurant. With a sleek design that captures the essence of Japanese cuisine.",
+      description: "Site vitrine pour un restaurant sushi avec design immersif, visuels gourmands et parcours de commande simplifie.",
       technologies: ["React", "Styled Components", "Node.js"],
       metrics: {
-        roi: 140,
         timeline: "7 weeks",
         teamSize: 3
       },
+      results: [
+        { value: "Mobile-first", label: "Commande simplifiee" },
+        { value: "Design immersif", label: "Univers marque" },
+        { value: "CTA clairs", label: "Prise de commande" }
+      ],
       ghLink: "",
       demoLink: "https://one-salty-tuna.vercel.app/"
     },
     {
       imgPath: tasty,
       title: "Tasty food",
-      category: "Food & Hospitality" ,
+      category: "Food & hospitality" ,
       clientType: "SME",
       featured: false,
       description: "Une Application web pour un restaurant fancy de sushi .",
       technologies: ["React", "Node.js"], 
       metrics: {
-        roi: 300,
         timeline: "3 weeks",
         teamSize: 3
       },
+      results: [
+        { value: "Concept design", label: "Univers culinaire" },
+        { value: "Demo project", label: "Presentation produit" },
+        { value: "Performance optimized", label: "Interface legere" }
+      ],
       ghLink: "",
       demoLink: "https://responsive-website-mu-one.vercel.app/#home"
     }, 
     {
       imgPath: hotel,
       title: "Fancyhostel",
-      category: "Hospitality",
+      category: "Hotellerie",
       clientType: "M",
       featured: false,
       description: "Site vitrine moderne pour un hotel 3 étoiles, présentant les services, et un formulaire de prise de rendez-vous en ligne.",
       technologies: ["React", "Bootstrap", "Node.js"],
       metrics: {
-        roi: 120,
         timeline: "4 weeks",
         teamSize: 2
       },
@@ -262,28 +266,27 @@ function Projects() {
     {
       imgPath: "https://s.wordpress.com/mshots/v1/https://fitness-coach-website-template-dark-delta.vercel.app/",
       title: "Fitness Coach Website",
-      category: "Health & Fitness",
+      category: "Sante & fitness",
       clientType: "Coach",
       featured: false,
-      description: "Professional Fitness Coach site focused on weight loss, strength training, and personalized programs—designed for busy professionals, with science-backed results and clear conversion flows.",
-      detailedDescription: "A clean, modern landing and content structure tailored to coaching services: hero value proposition, benefits, programs overview, testimonials, and strong CTA blocks that fit demanding schedules.",
+      description: "Site de coach sportif avec promesse claire, structure de landing page et prise de contact orientee conversion.",
+      detailedDescription: "Landing page moderne pour presenter des offres de coaching, clarifier les benefices et guider l'utilisateur vers la prise de contact.",
       technologies: ["Next.js", "Tailwind CSS"],
       metrics: {
-        roi: 160,
         timeline: "3 weeks",
         teamSize: 2
       },
-      challenge: "Present coaching offer with clear outcomes and trust signals while keeping the interface fast and accessible.",
-      solution: "Structured content sections with persuasive copy, consistent CTAs, and mobile-first performance optimizations.",
+      challenge: "Presenter une offre de coaching de facon claire et rassurante tout en gardant une interface rapide et lisible.",
+      solution: "Sections bien structurees, copywriting orienté action et optimisations mobiles.",
       process: [
-        { title: "Discovery", description: "Defined persona, value proposition, and core program benefits." },
-        { title: "Design", description: "Built modern sections with strong hierarchy and easy CTAs." },
-        { title: "Implementation", description: "Developed with Next.js and Tailwind; optimized for performance." }
+        { title: "Cadrage", description: "Definition de la cible, de la promesse et des benefices cles." },
+        { title: "Design", description: "Construction des sections avec hierarchie forte et CTA visibles." },
+        { title: "Implementation", description: "Developpement Next.js et Tailwind avec optimisation performance." }
       ],
       results: [
-        { value: "+35%", label: "Lead Conversion" },
-        { value: "<1s", label: "First Paint" },
-        { value: "95+", label: "Lighthouse Score" }
+        { value: "Conversion-focused design", label: "Structure de landing page" },
+        { value: "Performance optimized", label: "Chargement rapide" },
+        { value: "Clear call-to-action", label: "Parcours prise de contact" }
       ],
       ghLink: "https://github.com/Dakster-z/fitness-coach-website-template-dark",
       demoLink: "https://fitness-coach-website-template-dark-delta.vercel.app/"
@@ -292,19 +295,39 @@ function Projects() {
 
   return (
   <React.Fragment>
-      <SEO title="Projects – Portfolio" description="Showcase of recent projects with details, tech stack, and results." />
-    <Container fluid className="project-section">
-      <Particle />
+      <SEO title="Projets – Portfolio" description="Selection de projets web et IA avec contexte, stack technique et approche produit." />
+    <Container fluid id="etudes-de-cas" className="project-section">
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          Études de <strong className="purple">cas</strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently. Each project showcases unique challenges, creative solutions, and measurable results.
+          Des projets conçus pour clarifier une offre, renforcer la crédibilité d'une marque et guider l'utilisateur vers l'action.
         </p>
 
         {/* Projects Grid */}
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <div className={styles.ugcProjectCard}>
+              <div className={styles.ugcProjectVisual}>
+                <span className={styles.ugcProjectPlay}>▶</span>
+                <span className={styles.ugcProjectBadge}>NOUVEAU · CONTENU DE CONVERSION</span>
+              </div>
+              <div className={styles.ugcProjectBody}>
+                <h2>Votre site peut aussi devenir votre meilleur Reel.</h2>
+                <p>
+                  Un Reel court peut montrer votre offre, vos services et votre parcours de prise de contact en quelques secondes, sans inventer de promesses ni reconstruire votre interface.
+                </p>
+                <ul>
+                  <li>Script orienté action</li>
+                  <li>Screenshots réels dans un mockup propre</li>
+                  <li>Sous-titres et voix off</li>
+                  <li>CTA unique : rendez-vous, devis, réservation ou DM</li>
+                </ul>
+                <a href="/ugc" className={styles.ugcProjectCta}>VOIR L’OFFRE UGC <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </Col>
           {projectsData.map((project, index) => (
               <Col md={4} className="project-card" key={index}>
                 <ProjectCard
@@ -336,31 +359,31 @@ function Projects() {
           <Col md={12}>
             <div className="project-stats">
               <h3 className="text-center mb-4" style={{ color: "#c770f0" }}>
-                Portfolio Impact
+                Points forts du portfolio
               </h3>
               <Row>
                 <Col md={3} className="text-center">
                   <div className="stat-item">
                     <h2 style={{ color: "#c770f0" }}>{projectsData.length}+</h2>
-                    <p style={{ color: "white" }}>Projects Completed</p>
+                    <p style={{ color: "white" }}>Projets presentes</p>
                   </div>
                 </Col>
                 <Col md={3} className="text-center">
                   <div className="stat-item">
-                    <h2 style={{ color: "#c770f0" }}>150%</h2>
-                    <p style={{ color: "white" }}>Average ROI</p>
+                    <h2 style={{ color: "#c770f0" }}>Mobile-first</h2>
+                    <p style={{ color: "white" }}>Experience prioritaire</p>
                   </div>
                 </Col>
                 <Col md={3} className="text-center">
                   <div className="stat-item">
-                    <h2 style={{ color: "#2ecc71" }}>98%</h2>
-                    <p style={{ color: "white" }}>Client Satisfaction</p>
+                    <h2 style={{ color: "#2ecc71" }}>CTA clairs</h2>
+                    <p style={{ color: "white" }}>Orientation conversion</p>
                   </div>
                 </Col>
                 <Col md={3} className="text-center">
                   <div className="stat-item">
-                    <h2 style={{ color: "#c770f0" }}>24/7</h2>
-                    <p style={{ color: "white" }}>Support Available</p>
+                    <h2 style={{ color: "#c770f0" }}>Performance</h2>
+                    <p style={{ color: "white" }}>Optimisation front-end</p>
                   </div>
                 </Col>
               </Row>
@@ -371,7 +394,7 @@ function Projects() {
         <Row className="mt-3">
           <Col md={12} className="text-center">
             <p style={{ color: "#aaa", fontSize: "0.9rem" }}>
-              All medical projects are built with HIPAA‑compliant data handling and secure hosting.
+              Les projets affiches mettent l'accent sur l'experience utilisateur, la clarté du message et la qualite d'execution. Les chiffres non verifies ont ete retires.
             </p>
           </Col>
         </Row>

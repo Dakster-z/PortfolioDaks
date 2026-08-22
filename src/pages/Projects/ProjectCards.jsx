@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
 import Modal from "react-bootstrap/Modal";
 import Carousel from "react-bootstrap/Carousel";
 import { CgWebsite } from "react-icons/cg";
-import { BsGithub, BsEye, BsAward, BsGraphUp, BsClock } from "react-icons/bs";
+import { BsGithub, BsEye, BsAward, BsClock } from "react-icons/bs";
 import { FaUsers, FaRocket, FaPalette } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import styles from "./ProjectCards.module.css";
@@ -22,6 +22,8 @@ function ProjectCards(props) {
     navigate(`/case-study/${props.projectId || 1}`);
   };
 
+  const hasGithubUrl = /^https?:\/\//.test(props.ghLink || "");
+
   return (
     <>
       <Card className={`project-card-view ${styles.enhancedCard}`}>
@@ -33,7 +35,7 @@ function ProjectCards(props) {
               className={styles.overlayBtn}
               onClick={handleShow}
             >
-              <BsEye /> View Details
+              <BsEye /> Voir les details
             </Button>
           </div>
           {props.category && (
@@ -43,7 +45,7 @@ function ProjectCards(props) {
           )}
           {props.featured && (
             <Badge bg="warning" text="dark" className={styles.featuredBadge}>
-              <BsAward /> Featured
+              <BsAward /> En avant
             </Badge>
           )}
         </div>
@@ -68,12 +70,6 @@ function ProjectCards(props) {
           {/* Project Metrics */}
           {props.metrics && (
             <div className={styles.projectMetrics}>
-              {props.metrics.roi && (
-                <div className={styles.metricItem}>
-                  <BsGraphUp className={styles.metricIcon} />
-                  <span>+{props.metrics.roi}% ROI</span>
-                </div>
-              )}
               {props.metrics.timeline && (
                 <div className={styles.metricItem}>
                   <BsClock className={styles.metricIcon} />
@@ -83,7 +79,7 @@ function ProjectCards(props) {
               {props.metrics.teamSize && (
                 <div className={styles.metricItem}>
                   <FaUsers className={styles.metricIcon} />
-                  <span>{props.metrics.teamSize} Team</span>
+                  <span>{props.metrics.teamSize} pers.</span>
                 </div>
               )}
             </div>
@@ -101,10 +97,12 @@ function ProjectCards(props) {
           )}
 
           <div className={styles.cardActions}>
-            <Button variant="primary" href={props.ghLink} target="_blank" className="primaryCTA" aria-label={`Open GitHub repo for ${props.title}`}>
-              <BsGithub /> &nbsp;
-              {props.isBlog ? "Blog" : "GitHub"}
-            </Button>
+            {hasGithubUrl && (
+              <Button variant="primary" href={props.ghLink} target="_blank" rel="noreferrer" className="primaryCTA" aria-label={`Open GitHub repo for ${props.title}`}>
+                <BsGithub /> &nbsp;
+                {props.isBlog ? "Blog" : "GitHub"}
+              </Button>
+            )}
 
             {!props.isBlog && props.demoLink && (
               <Button
@@ -114,7 +112,7 @@ function ProjectCards(props) {
                 style={{ marginLeft: "10px" }}
               >
                 <CgWebsite /> &nbsp;
-                Live Demo
+                Voir la demo
               </Button>
             )}
 
@@ -125,7 +123,7 @@ function ProjectCards(props) {
                 style={{ marginLeft: "10px" }}
               >
                 <FaPalette /> &nbsp;
-                Before/After
+                Avant/Apres
               </Button>
             )}
           </div>
@@ -135,12 +133,12 @@ function ProjectCards(props) {
             <div className={styles.beforeAfterSection}>
               <div className={styles.beforeAfterContainer}>
                 <div className={styles.beforeSection}>
-                  <h6>Before</h6>
-                  <img src={props.beforeAfter.before} alt="Before" className={styles.beforeAfterImg} loading="lazy" decoding="async" />
+                  <h6>Avant</h6>
+                  <img src={props.beforeAfter.before} alt="Avant" className={styles.beforeAfterImg} loading="lazy" decoding="async" />
                 </div>
                 <div className={styles.afterSection}>
-                  <h6>After</h6>
-                  <img src={props.beforeAfter.after} alt="After" className={styles.beforeAfterImg} loading="lazy" decoding="async" />
+                  <h6>Apres</h6>
+                  <img src={props.beforeAfter.after} alt="Apres" className={styles.beforeAfterImg} loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -178,13 +176,13 @@ function ProjectCards(props) {
 
           {/* Project Details */}
           <div className={styles.projectDetails}>
-            <h5>Project Overview</h5>
+            <h5>Vue d'ensemble</h5>
             <p>{props.detailedDescription || props.description}</p>
 
             {/* Challenge & Solution */}
             {props.challenge && (
               <div className={styles.challengeSolution}>
-                <h6>Challenge</h6>
+                <h6>Defi</h6>
                 <p>{props.challenge}</p>
                 
                 {props.solution && (
@@ -199,7 +197,7 @@ function ProjectCards(props) {
             {/* Process Steps */}
             {props.process && (
               <div className={styles.processSection}>
-                <h6>Creative Process</h6>
+                <h6>Processus</h6>
                 <div className={styles.processSteps}>
                   {props.process.map((step, index) => (
                     <div key={index} className={styles.processStep}>
@@ -217,7 +215,7 @@ function ProjectCards(props) {
             {/* Results & Impact */}
             {props.results && (
               <div className={styles.resultsSection}>
-                <h6>Results & Impact</h6>
+                <h6>Resultats cles</h6>
                 <div className={styles.resultsGrid}>
                   {props.results.map((result, index) => (
                     <div key={index} className={styles.resultItem}>
@@ -231,9 +229,9 @@ function ProjectCards(props) {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          {props.ghLink && (
+          {hasGithubUrl && (
             <Button variant="outline-primary" href={props.ghLink} target="_blank">
-              <BsGithub /> View Code
+              <BsGithub /> Voir le code
             </Button>
           )}
           {props.demoLink && (
@@ -241,7 +239,7 @@ function ProjectCards(props) {
               variant="primary" 
               onClick={handleCaseStudyClick}
             >
-              <FaRocket /> View Case Study
+              <FaRocket /> Voir l'etude de cas
             </Button>
           )}
         </Modal.Footer>

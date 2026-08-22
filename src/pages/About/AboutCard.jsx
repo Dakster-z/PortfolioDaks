@@ -1,18 +1,16 @@
-import React from "react";
 import Card from "react-bootstrap/Card";
 
 function AboutCard() {
   return (
     <Card className="quote-card-view">
       <Card.Body>
-        <h2>About Me</h2>
+        <h2>A propos</h2>
         <p>
-          Hi, I'm <span className="purple">Daksster</span> - a full-stack developer who specializes in integrating AI capabilities into web applications.
+          Bonjour, je suis <span className="purple">Daksster</span>, developpeur full-stack specialise dans la creation d'experiences web et l'integration de solutions IA utiles.
         </p>
         <p>
-          Over the past 5 years, I've built everything from simple websites to complex web applications.
-          Recently, I've been focusing on AI integration - building tools that demonstrate how artificial
-          intelligence can enhance user experiences and automate business processes.
+          Depuis plus de 5 ans, je conçois des sites vitrines, applications web et parcours digitaux pour aider les marques a mieux presenter leur offre, gagner du temps et convertir plus clairement.
+          Aujourd'hui, je mets un accent particulier sur l'automatisation, les integrations API et les usages concrets de l'IA.
         </p>
         <div style={{
           display: "grid",
@@ -21,27 +19,26 @@ function AboutCard() {
           margin: "25px 0"
         }}>
           <div>
-            <h3 style={{ color: "var(--accent)" }}>🎯 Technical Expertise</h3>
+            <h3 style={{ color: "var(--accent)" }}>🎯 Expertise technique</h3>
             <ul>
-              <li>Frontend: React, Next.js, JavaScript, Tailwind CSS</li>
-              <li>Backend: Node.js, Python, Express, REST APIs</li>
-              <li>Database: MongoDB, PostgreSQL, Redis</li>
-              <li>AI: OpenAI API, ChatGPT integration, Automation</li>
+              <li>Front-end : React, Next.js, JavaScript, Tailwind CSS</li>
+              <li>Back-end : Node.js, Python, Express, API REST</li>
+              <li>Base de donnees : MongoDB, PostgreSQL, Redis</li>
+              <li>IA : OpenAI API, automatisation, assistants conversationnels</li>
             </ul>
           </div>
           <div>
-            <h3 style={{ color: "var(--accent)" }}>🚀 What I Build</h3>
+            <h3 style={{ color: "var(--accent)" }}>🚀 Ce que je conçois</h3>
             <ul>
-              <li>AI-enhanced web applications</li>
-              <li>Business automation tools</li>
-              <li>E-commerce solutions</li>
-              <li>Custom dashboards and analytics</li>
+              <li>Applications web enrichies par l'IA</li>
+              <li>Outils d'automatisation business</li>
+              <li>Experiences e-commerce orientees conversion</li>
+              <li>Dashboards et interfaces metier sur mesure</li>
             </ul>
           </div>
         </div>
         <p>
-          I'm passionate about building tools that solve real problems and make businesses more efficient.
-          Every project I work on focuses on delivering measurable value and exceptional user experience.
+          Je privilegie les projets utiles, credibles et bien executes. Chaque mission vise une experience plus fluide, une communication plus claire et une base technique evolutive.
         </p>
       </Card.Body>
     </Card>

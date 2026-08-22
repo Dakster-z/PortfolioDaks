@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { env, whatsappLink } from "../config/env";
 
@@ -58,7 +58,7 @@ function WhatsAppPopup() {
             </button>
           </div>
           <p style={{ marginTop: 8, marginBottom: 12 }}>
-            {phoneSet ? "Click to start a chat on WhatsApp." : "WhatsApp contact is currently unavailable."}
+            {phoneSet ? "Cliquez pour lancer une conversation WhatsApp." : "Le contact WhatsApp est temporairement indisponible."}
           </p>
           <div style={{ display: "flex", gap: 8 }}>
             {phoneSet ? (
@@ -77,7 +77,7 @@ function WhatsAppPopup() {
                   fontWeight: 600,
                 }}
               >
-                WhatsApp: +212 620 001 002
+                WhatsApp : +212 620 001 002
               </a>
             ) : (
               <span
@@ -91,7 +91,7 @@ function WhatsAppPopup() {
                   fontWeight: 600,
                 }}
               >
-                Not configured
+                Indisponible
               </span>
             )}
           </div>

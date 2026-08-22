@@ -1,0 +1,191 @@
+.servicesSection {
+  padding: clamp(4.5rem, 9vw, 8rem) 1.25rem;
+  background: #071426;
+  color: #f5f8ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.servicesSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 12% 8%, rgba(48, 208, 255, 0.12), transparent 30%), radial-gradient(circle at 90% 85%, rgba(139, 92, 246, 0.13), transparent 28%);
+  pointer-events: none;
+}
+
+.servicesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.servicesHeader {
+  max-width: 760px;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  color: #5ee6ff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin: 0 0 1rem;
+}
+
+.servicesTitle {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.servicesIntro {
+  color: #aebdce;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.serviceCard {
+  background: rgba(15, 32, 54, 0.88);
+  border: 1px solid rgba(137, 178, 214, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceCard:hover {
+  border-color: rgba(94, 230, 255, 0.6);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+  transform: translateY(-6px);
+}
+
+.imageWrap {
+  aspect-ratio: 4 / 3;
+  position: relative;
+  background: #10243d;
+}
+
+.serviceImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.numberBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #071426;
+  border: 1px solid rgba(94, 230, 255, 0.8);
+  color: #5ee6ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.cardContent h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.3rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.cardContent p {
+  color: #b6c5d5;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  margin: 0 0 1.25rem;
+}
+
+.cardContent ul {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.cardContent li {
+  position: relative;
+  margin-bottom: 0.55rem;
+  padding-left: 1.1rem;
+  color: #d4dfeb;
+  font-size: 0.88rem;
+}
+
+.cardContent li::before {
+  content: "";
+  position: absolute;
+  top: 0.55rem;
+  left: 0.1rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: #5ee6ff;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  min-height: 2.75rem;
+  width: 100%;
+  margin-top: auto;
+  border: 1px solid rgba(94, 230, 255, 0.55);
+  border-radius: 999px;
+  background: rgba(94, 230, 255, 0.08);
+  color: #e9fbff;
+  text-decoration: none;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.ctaButton:hover,
+.ctaButton:focus-visible {
+  background: #5ee6ff;
+  color: #071426;
+}
+
+@media (max-width: 768px) {
+  .servicesSection {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .servicesHeader {
+    margin-bottom: 2rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardContent {
+    padding: 1.35rem;
+  }
+}

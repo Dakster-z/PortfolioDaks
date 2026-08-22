@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Badge, Button, Modal } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
 import Particle from "../../shared/effects/Particle";
@@ -9,7 +9,7 @@ import "./CaseStudy.css";
 import styles from "./CaseStudy.module.css";
 
 function CaseStudy() {
-  const { projectId } = useParams();
+  const { id: projectId } = useParams();
   const navigate = useNavigate();
   const [showImageModal, setShowImageModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
@@ -18,103 +18,74 @@ function CaseStudy() {
   // Enhanced project data with detailed case study information
   const caseStudyData = {
     "1": {
-      title: "E-Commerce Revolution Platform",
-      subtitle: "Transforming Online Shopping Experience",
-      category: "E-Commerce Development",
-      client: "TechMart Solutions",
-      duration: "6 months",
-      team: "8 specialists",
+      title: "Refonte de présence digitale",
+      subtitle: "Un site plus clair, plus crédible et plus orienté conversion",
+      category: "Stratégie web",
+      client: "Projet de marque",
+      duration: "4 à 6 semaines",
+      team: "Équipe projet",
       year: "2024",
       heroImage: placeholderProject,
-      
+
       overview: {
-        challenge: "TechMart Solutions needed a complete overhaul of their outdated e-commerce platform to compete in the modern digital marketplace. Their existing system had poor user experience, slow loading times, and limited mobile functionality.",
-        solution: "We designed and developed a cutting-edge e-commerce platform with AI-powered recommendations, seamless mobile experience, and advanced analytics dashboard.",
-        impact: "300% increase in conversion rates, 85% improvement in page load speeds, and 250% growth in mobile sales within 3 months of launch."
+        challenge: "Présenter une offre premium de manière lisible, sans surcharge visuelle ni parcours compliqué pour les visiteurs.",
+        solution: "Structuration claire des sections, hiérarchie forte du message, boutons d'action visibles et meilleure fluidité mobile.",
+        impact: "Le site devient un outil de conversion : plus simple à comprendre, plus rassurant à naviguer et plus utile pour la prise de contact."
       },
 
       metrics: {
-        roi: "450%",
-        timeline: "6 months",
-        teamSize: "8 people",
-        satisfaction: "98%",
-        performance: "+300%",
-        users: "50K+ active"
+        timeline: "4 à 6 semaines",
+        teamSize: "2 à 3 personnes",
+        focus: "Conversion",
+        delivery: "Mobile-first",
+        performance: "Optimisée",
+        output: "Site web"
       },
 
-      technologies: ["React", "Node.js", "MongoDB", "AWS", "Stripe", "AI/ML", "Docker", "Redis"],
+      technologies: ["React", "Node.js", "Bootstrap", "UI/UX", "Automatisations"],
 
       process: [
         {
-          phase: "Discovery & Research",
-          duration: "2 weeks",
-          description: "Deep dive into user behavior, market analysis, and technical requirements",
-          deliverables: ["User personas", "Market research", "Technical audit", "Competitive analysis"],
+          phase: "Audit & cadrage",
+          duration: "1 semaine",
+          description: "Analyse de l'offre, du public cible et des points de friction du parcours existant.",
+          deliverables: ["Positionnement", "Cible", "Objectifs", "Points de friction"],
           image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
         },
         {
-          phase: "Strategy & Planning",
-          duration: "1 week",
-          description: "Creating comprehensive project roadmap and design system",
-          deliverables: ["Project roadmap", "Design system", "Architecture plan", "Sprint planning"],
+          phase: "Direction créative",
+          duration: "1 semaine",
+          description: "Définition de la hiérarchie visuelle, du ton de marque et des appels à l'action prioritaires.",
+          deliverables: ["Wireframes", "Structure de contenu", "Palette", "CTA"],
           image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
         },
         {
-          phase: "Design & Prototyping",
-          duration: "3 weeks",
-          description: "Creating intuitive user interfaces and interactive prototypes",
-          deliverables: ["Wireframes", "UI designs", "Interactive prototypes", "User testing"],
-          image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
-        },
-        {
-          phase: "Development",
-          duration: "16 weeks",
-          description: "Building scalable, secure, and performant e-commerce platform",
-          deliverables: ["Frontend development", "Backend APIs", "Database design", "Third-party integrations"],
+          phase: "Développement",
+          duration: "2 à 3 semaines",
+          description: "Mise en place d'une interface fluide, rapide et adaptée à l'objectif business du projet.",
+          deliverables: ["Frontend", "Responsive", "Formulaires", "Intégrations"],
           image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
-        },
-        {
-          phase: "Testing & Optimization",
-          duration: "2 weeks",
-          description: "Comprehensive testing and performance optimization",
-          deliverables: ["Quality assurance", "Performance testing", "Security audit", "Bug fixes"],
-          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
-        },
-        {
-          phase: "Launch & Support",
-          duration: "1 week",
-          description: "Smooth deployment and ongoing support",
-          deliverables: ["Production deployment", "Staff training", "Documentation", "Ongoing support"],
-          image: "https://images.unsplash.com/photo-1����-1234567890?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
         }
       ],
 
       gallery: [
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80",
         "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80",
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
       ],
 
-      testimonial: {
-        quote: "The team delivered beyond our expectations. The new platform has revolutionized our business and customer experience.",
-        author: "Sarah Johnson",
-        position: "CEO, TechMart Solutions",
-        avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80"
-      },
-
       results: [
-        { metric: "Conversion Rate", before: "2.1%", after: "8.4%", improvement: "+300%" },
-        { metric: "Page Load Speed", before: "4.2s", after: "0.8s", improvement: "+425%" },
-        { metric: "Mobile Sales", before: "$50K/month", after: "$175K/month", improvement: "+250%" },
-        { metric: "User Satisfaction", before: "3.2/5", after: "4.8/5", improvement: "+50%" }
+        { metric: "Message principal", before: "Offre diffuse", after: "Proposition claire", improvement: "Clarifie" },
+        { metric: "Navigation", before: "Parcours dense", after: "Accès direct", improvement: "Simplifie" },
+        { metric: "Mobile", before: "Lecture lourde", after: "Sections fluides", improvement: "Optimise" },
+        { metric: "CTA", before: "Peu visibles", after: "Placement stratégique", improvement: "Renforce" }
       ],
 
       nextSteps: [
-        "AI-powered chatbot integration",
-        "Advanced analytics dashboard",
-        "Multi-language support",
-        "AR product visualization"
+        "Automatisation des demandes",
+        "Contenu social aligné à la marque",
+        "Suivi des leads et optimisation",
+        "Mise en place d'un funnel plus fort"
       ]
     }
   };
@@ -155,7 +126,7 @@ function CaseStudy() {
                   className={`${styles.backBtn} mb-4`}
                   onClick={() => navigate('/project')}
                 >
-                  <FaArrowLeft /> Back to Projects
+                  <FaArrowLeft /> Retour aux projets
                 </Button>
                 
                 <div className={styles.heroContent}>
@@ -190,7 +161,7 @@ function CaseStudy() {
          {/* Project Overview */}
         <Row className={styles.overviewSection}>
            <Col md={12}>
-            <h2 className={styles.sectionTitle}>Project Overview</h2>
+            <h2 className={styles.sectionTitle}>Vue d'ensemble</h2>
           </Col>
           <Col md={4}>
             <Card className={`${styles.overviewCard} ${styles.challengeCard}`}>
@@ -198,7 +169,7 @@ function CaseStudy() {
                 <div className={styles.cardIcon}>
                   <FaLightbulb />
                 </div>
-                <h4>Challenge</h4>
+                <h4>Defi</h4>
                 <p>{project.overview.challenge}</p>
               </Card.Body>
             </Card>
@@ -230,7 +201,7 @@ function CaseStudy() {
          {/* Key Metrics */}
         <Row className={styles.metricsSection}>
            <Col md={12}>
-            <h2 className={styles.sectionTitle}>Key Metrics</h2>
+            <h2 className={styles.sectionTitle}>Points cles</h2>
           </Col>
           {Object.entries(project.metrics).map(([key, value], index) => (
             <Col md={2} key={index}>
@@ -245,7 +216,7 @@ function CaseStudy() {
         {/* Technology Stack */}
         <Row className="tech-section">
           <Col md={12}>
-            <h2 className="section-title">Technology Stack</h2>
+            <h2 className="section-title">Stack technique</h2>
             <div className="tech-stack">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} bg="secondary" className="tech-badge">
@@ -259,7 +230,7 @@ function CaseStudy() {
         {/* Process Timeline */}
         <Row className="process-section">
           <Col md={12}>
-            <h2 className="section-title">Our Creative Process</h2>
+            <h2 className="section-title">Processus de creation</h2>
             <div className="process-timeline">
               {project.process.map((step, index) => (
                 <div 
@@ -298,7 +269,7 @@ function CaseStudy() {
           <Col md={12}>
             <h2 className="section-title">
               <FaChartLine className="section-icon" />
-              Results & Impact
+              Resultats cles
             </h2>
           </Col>
           {project.results.map((result, index) => (
@@ -308,12 +279,12 @@ function CaseStudy() {
                   <h5>{result.metric}</h5>
                   <div className="result-comparison">
                     <div className="before">
-                      <span className="label">Before</span>
+                      <span className="label">Avant</span>
                       <span className="value">{result.before}</span>
                     </div>
                     <BsArrowRight className="arrow" />
                     <div className="after">
-                      <span className="label">After</span>
+                      <span className="label">Apres</span>
                       <span className="value">{result.after}</span>
                     </div>
                   </div>
@@ -329,7 +300,7 @@ function CaseStudy() {
         {/* Project Gallery */}
         <Row className="gallery-section">
           <Col md={12}>
-            <h2 className="section-title">Project Gallery</h2>
+            <h2 className="section-title">Galerie projet</h2>
             <div className="project-gallery">
               {project.gallery.map((image, index) => (
                 <div key={index} className="gallery-item">
@@ -347,8 +318,8 @@ function CaseStudy() {
           </Col>
         </Row>
 
-        {/* Client Testimonial */}
-        <Row className="testimonial-section">
+        {/* Testimonial */}
+        {project.testimonial && <Row className="testimonial-section">
           <Col md={12}>
             <Card className="testimonial-card">
               <Card.Body>
@@ -366,12 +337,12 @@ function CaseStudy() {
               </Card.Body>
             </Card>
           </Col>
-        </Row>
+        </Row>}
 
         {/* Next Steps */}
         <Row className="next-steps-section">
           <Col md={12}>
-            <h2 className="section-title">Future Enhancements</h2>
+            <h2 className="section-title">Pistes d'evolution</h2>
             <div className="next-steps">
               {project.nextSteps.map((step, index) => (
                 <div key={index} className="next-step-item">
@@ -388,11 +359,11 @@ function CaseStudy() {
                 {/* Before / After Comparison */}
                 <Row className="before-after-section">
                   <Col md={12}>
-                    <h2 className="section-title">Before / After</h2>
+                    <h2 className="section-title">Avant / Apres</h2>
                   </Col>
                   {project.gallery.slice(0,2).map((img, idx) => (
                     <Col md={6} key={idx}>
-                      <img src={img} alt={idx===0?"Before" : "After"} className="before-after-img" />
+                      <img src={img} alt={idx===0?"Avant" : "Apres"} className="before-after-img" />
                     </Col>
                   ))}
                 </Row>
@@ -400,15 +371,15 @@ function CaseStudy() {
 
         <Row className="cta-section">
           <Col md={12} className="text-center">
-            <h3>Ready to Start Your Project?</h3>
-            <p>Let's create something amazing together</p>
+            <h3>Vous avez un projet a lancer ?</h3>
+            <p>Parlons de vos objectifs et de la meilleure structure pour les atteindre.</p>
             <Button 
               variant="primary" 
               size="lg" 
               className="cta-btn"
               onClick={() => navigate('/contact')}
             >
-              Start Your Project <BsArrowRight />
+              Demarrer un projet <BsArrowRight />
             </Button>
           </Col>
         </Row>

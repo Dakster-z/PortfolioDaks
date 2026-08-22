@@ -51,26 +51,26 @@ function ProjectInquiry() {
   const progressPercentage = (currentStep / totalSteps) * 100;
 
   const projectTypes = [
-    "Website Design & Development",
-    "Mobile App Development",
-    "Brand Identity & Logo Design",
-    "Digital Marketing Campaign",
-    "E-commerce Platform",
+    "Site web vitrine ou sur mesure",
+    "Application mobile",
+    "Identite visuelle & logo",
+    "Campagne marketing digitale",
+    "Plateforme e-commerce",
     "UI/UX Design",
-    "AR/VR Experience",
-    "AI Integration",
-    "Other"
+    "Experience AR/VR",
+    "Integration IA",
+    "Autre"
   ];
 
   const designStyles = [
-    "Modern & Minimalist",
-    "Bold & Creative",
-    "Professional & Corporate",
-    "Playful & Fun",
-    "Elegant & Sophisticated",
-    "Trendy & Contemporary",
-    "Classic & Timeless",
-    "Custom Style"
+    "Moderne & minimaliste",
+    "Audacieux & creatif",
+    "Professionnel & corporate",
+    "Ludique & accessible",
+    "Elegant & premium",
+    "Contemporain",
+    "Classique & intemporel",
+    "Style sur mesure"
   ];
 
   const budgetRanges = [
@@ -79,11 +79,11 @@ function ProjectInquiry() {
     "$25,000 - $50,000",
     "$50,000 - $100,000",
     "$100,000+",
-    "Let's discuss"
+    "A definir ensemble"
   ];
 
   const timelineOptions = [
-    "ASAP (Rush project)",
+    "ASAP (projet urgent)",
     "1-2 months",
     "3-4 months",
     "5-6 months",
@@ -92,14 +92,14 @@ function ProjectInquiry() {
   ];
 
   const projectGoals = [
-    "Increase brand awareness",
-    "Generate more leads",
-    "Improve user experience",
-    "Boost online sales",
-    "Modernize brand image",
-    "Enter new market",
-    "Improve efficiency",
-    "Other"
+    "Renforcer la notoriete",
+    "Generer plus de leads",
+    "Ameliorer l'experience utilisateur",
+    "Augmenter les ventes en ligne",
+    "Moderniser l'image de marque",
+    "Toucher un nouveau marche",
+    "Gagner en efficacite",
+    "Autre"
   ];
 
   const handleInputChange = (e) => {
@@ -159,7 +159,7 @@ function ProjectInquiry() {
       setCurrentStep(prev => Math.min(prev + 1, totalSteps));
     } else {
       setAlertType("warning");
-      setAlertMessage("Please fill in all required fields before proceeding.");
+      setAlertMessage("Merci de remplir les champs obligatoires avant de continuer.");
       setShowAlert(true);
       setTimeout(() => setShowAlert(false), 3000);
     }
@@ -214,7 +214,7 @@ function ProjectInquiry() {
         }
         window.open(fallbackLink, "_blank", "noopener,noreferrer");
         setAlertType("success");
-        setAlertMessage("Email is not configured yet, so your inquiry was redirected to WhatsApp.");
+        setAlertMessage("L'envoi par email n'est pas encore configure ici. Votre demande a ete redirigee vers WhatsApp.");
         setShowAlert(true);
         setTimeout(() => setShowAlert(false), 5000);
         return;
@@ -232,7 +232,7 @@ function ProjectInquiry() {
       });
       if (!res.ok) throw new Error("Submission failed");
       setAlertType("success");
-      setAlertMessage("Thank you! Your project inquiry has been submitted successfully. We'll get back to you within 24 hours.");
+      setAlertMessage("Merci ! Votre demande de projet a bien ete envoyee. Je reviens vers vous rapidement.");
       setShowAlert(true);
       setFormData({
         name: "", email: "", phone: "", company: "", position: "",
@@ -245,7 +245,7 @@ function ProjectInquiry() {
       setTimeout(() => setShowAlert(false), 5000);
     } catch (err) {
       setAlertType("danger");
-      setAlertMessage("Sorry, something went wrong. Please try again or contact us directly.");
+      setAlertMessage("Une erreur s'est produite. Merci de reessayer ou de me contacter directement.");
       setShowAlert(true);
       setTimeout(() => setShowAlert(false), 5000);
     } finally {
@@ -260,27 +260,27 @@ function ProjectInquiry() {
           <div className="step-content">
             <h3 className="step-title">
               <FaUser className="step-icon" />
-              Contact Information
+              Informations de contact
             </h3>
-            <p className="step-description">Let's start with your basic information</p>
+            <p className="step-description">Commencons par vos informations essentielles.</p>
             
             <Row>
               <Col md={6}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Full Name *</Form.Label>
+                  <Form.Label>Nom complet *</Form.Label>
                   <Form.Control
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="Your full name"
+                    placeholder="Votre nom complet"
                     required
                   />
                 </Form.Group>
               </Col>
               <Col md={6}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Email Address *</Form.Label>
+                  <Form.Label>Email *</Form.Label>
                   <Form.Control
                     type="email"
                     name="email"
@@ -296,7 +296,7 @@ function ProjectInquiry() {
             <Row>
               <Col md={6}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Phone Number</Form.Label>
+                  <Form.Label>Telephone</Form.Label>
                   <Form.Control
                     type="tel"
                     name="phone"
@@ -308,13 +308,13 @@ function ProjectInquiry() {
               </Col>
               <Col md={6}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Company/Organization *</Form.Label>
+                  <Form.Label>Entreprise / organisation *</Form.Label>
                   <Form.Control
                     type="text"
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    placeholder="Your company name"
+                    placeholder="Nom de votre entreprise"
                     required
                   />
                 </Form.Group>
@@ -322,13 +322,13 @@ function ProjectInquiry() {
             </Row>
             
             <Form.Group className="mb-3">
-              <Form.Label>Your Position/Role</Form.Label>
+                  <Form.Label>Votre fonction</Form.Label>
               <Form.Control
                 type="text"
                 name="position"
                 value={formData.position}
                 onChange={handleInputChange}
-                placeholder="e.g., Marketing Manager, CEO, Founder"
+                    placeholder="Ex. : gerant, CEO, responsable marketing"
               />
             </Form.Group>
           </div>
@@ -339,19 +339,19 @@ function ProjectInquiry() {
           <div className="step-content">
             <h3 className="step-title">
               <FaProjectDiagram className="step-icon" />
-              Project Details
+              Details du projet
             </h3>
-            <p className="step-description">Tell us about your project</p>
+            <p className="step-description">Parlez-moi de votre projet.</p>
             
             <Form.Group className="mb-3">
-              <Form.Label>Project Type *</Form.Label>
+              <Form.Label>Type de projet *</Form.Label>
               <Form.Select
                 name="projectType"
                 value={formData.projectType}
                 onChange={handleInputChange}
                 required
               >
-                <option value="">Select project type</option>
+                <option value="">Selectionnez un type de projet</option>
                 {projectTypes.map((type, index) => (
                   <option key={index} value={type}>{type}</option>
                 ))}
@@ -359,43 +359,43 @@ function ProjectInquiry() {
             </Form.Group>
             
             <Form.Group className="mb-3">
-              <Form.Label>Project Title *</Form.Label>
+              <Form.Label>Titre du projet *</Form.Label>
               <Form.Control
                 type="text"
                 name="projectTitle"
                 value={formData.projectTitle}
                 onChange={handleInputChange}
-                placeholder="Give your project a name"
+                placeholder="Donnez un nom a votre projet"
                 required
               />
             </Form.Group>
             
             <Form.Group className="mb-3">
-              <Form.Label>Project Description *</Form.Label>
+              <Form.Label>Description du projet *</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={4}
                 name="projectDescription"
                 value={formData.projectDescription}
                 onChange={handleInputChange}
-                placeholder="Describe your project in detail. What do you want to achieve?"
+                placeholder="Decrivez votre projet et vos objectifs."
                 required
               />
             </Form.Group>
             
             <Form.Group className="mb-3">
-              <Form.Label>Target Audience</Form.Label>
+              <Form.Label>Cible principale</Form.Label>
               <Form.Control
                 type="text"
                 name="targetAudience"
                 value={formData.targetAudience}
                 onChange={handleInputChange}
-                placeholder="Who is your target audience? (e.g., young professionals, families, businesses)"
+                placeholder="Ex. : professionnels, familles, B2B, clients locaux"
               />
             </Form.Group>
             
             <Form.Group className="mb-3">
-              <Form.Label>Project Goals (Select all that apply)</Form.Label>
+              <Form.Label>Objectifs du projet (plusieurs choix possibles)</Form.Label>
               <div className="checkbox-group">
                 {projectGoals.map((goal, index) => (
                   <Form.Check
@@ -419,19 +419,19 @@ function ProjectInquiry() {
           <div className="step-content">
             <h3 className="step-title">
               <FaPalette className="step-icon" />
-              Creative Requirements
+              Direction creative
             </h3>
-            <p className="step-description">Help us understand your creative vision</p>
+            <p className="step-description">Aidez-moi a comprendre votre univers visuel.</p>
             
             <Form.Group className="mb-3">
-              <Form.Label>Preferred Design Style *</Form.Label>
+              <Form.Label>Style souhaite *</Form.Label>
               <Form.Select
                 name="designStyle"
                 value={formData.designStyle}
                 onChange={handleInputChange}
                 required
               >
-                <option value="">Select design style</option>
+                <option value="">Selectionnez un style</option>
                 {designStyles.map((style, index) => (
                   <option key={index} value={style}>{style}</option>
                 ))}
@@ -439,37 +439,37 @@ function ProjectInquiry() {
             </Form.Group>
             
             <Form.Group className="mb-3">
-              <Form.Label>Color Preferences</Form.Label>
+              <Form.Label>Preferences couleurs</Form.Label>
               <Form.Control
                 type="text"
                 name="colorPreferences"
                 value={formData.colorPreferences}
                 onChange={handleInputChange}
-                placeholder="e.g., Blue and white, warm colors, brand colors"
+                placeholder="Ex. : noir et blanc, couleurs chaudes, couleurs de marque"
               />
             </Form.Group>
             
             <Form.Group className="mb-3">
-              <Form.Label>Existing Brand Guidelines</Form.Label>
+              <Form.Label>Charte ou elements existants</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={3}
                 name="brandGuidelines"
                 value={formData.brandGuidelines}
                 onChange={handleInputChange}
-                placeholder="Do you have existing brand guidelines, logos, or style guides we should follow?"
+                placeholder="Logo, references, charte graphique ou contraintes de marque"
               />
             </Form.Group>
             
             <Form.Group className="mb-3">
-              <Form.Label>Inspiration & References</Form.Label>
+              <Form.Label>Inspirations & references</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={3}
                 name="inspiration"
                 value={formData.inspiration}
                 onChange={handleInputChange}
-                placeholder="Share any websites, designs, or references that inspire you"
+                placeholder="Sites, interfaces ou references que vous aimez"
               />
             </Form.Group>
           </div>
@@ -480,21 +480,21 @@ function ProjectInquiry() {
           <div className="step-content">
             <h3 className="step-title">
               <FaCalendarAlt className="step-icon" />
-              Timeline & Budget
+              Planning & budget
             </h3>
-            <p className="step-description">Let's discuss timing and investment</p>
+            <p className="step-description">Parlons delais et budget.</p>
             
             <Row>
               <Col md={6}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Project Timeline *</Form.Label>
+                  <Form.Label>Delai souhaite *</Form.Label>
                   <Form.Select
                     name="timeline"
                     value={formData.timeline}
                     onChange={handleInputChange}
                     required
                   >
-                    <option value="">Select timeline</option>
+                    <option value="">Selectionnez un delai</option>
                     {timelineOptions.map((option, index) => (
                       <option key={index} value={option}>{option}</option>
                     ))}
@@ -503,14 +503,14 @@ function ProjectInquiry() {
               </Col>
               <Col md={6}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Budget Range *</Form.Label>
+                  <Form.Label>Budget estimatif *</Form.Label>
                   <Form.Select
                     name="budget"
                     value={formData.budget}
                     onChange={handleInputChange}
                     required
                   >
-                    <option value="">Select budget range</option>
+                    <option value="">Selectionnez une fourchette</option>
                     {budgetRanges.map((range, index) => (
                       <option key={index} value={range}>{range}</option>
                     ))}
@@ -520,7 +520,7 @@ function ProjectInquiry() {
             </Row>
             
             <Form.Group className="mb-3">
-              <Form.Label>Desired Launch Date</Form.Label>
+              <Form.Label>Date de lancement souhaitee</Form.Label>
               <Form.Control
                 type="date"
                 name="launchDate"
@@ -530,17 +530,17 @@ function ProjectInquiry() {
             </Form.Group>
             
             <Form.Group className="mb-3">
-              <Form.Label>Project Priority</Form.Label>
+              <Form.Label>Priorite du projet</Form.Label>
               <Form.Select
                 name="priority"
                 value={formData.priority}
                 onChange={handleInputChange}
               >
-                <option value="">Select priority level</option>
-                <option value="Low">Low - We have time to plan</option>
-                <option value="Medium">Medium - Standard timeline</option>
-                <option value="High">High - Important project</option>
-                <option value="Urgent">Urgent - Need to start ASAP</option>
+                <option value="">Selectionnez un niveau</option>
+                <option value="Low">Faible - projet a preparer</option>
+                <option value="Medium">Moyenne - delai standard</option>
+                <option value="High">Haute - projet important</option>
+                <option value="Urgent">Urgente - lancement rapide</option>
               </Form.Select>
             </Form.Group>
           </div>
@@ -551,24 +551,24 @@ function ProjectInquiry() {
           <div className="step-content">
             <h3 className="step-title">
               <FaLightbulb className="step-icon" />
-              Additional Information
+              Informations complementaires
             </h3>
-            <p className="step-description">Any additional details or files</p>
+            <p className="step-description">Ajoutez tout element utile pour cadrer le projet.</p>
             
             <Form.Group className="mb-3">
-              <Form.Label>Additional Requirements</Form.Label>
+              <Form.Label>Besoins complementaires</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={4}
                 name="additionalRequirements"
                 value={formData.additionalRequirements}
                 onChange={handleInputChange}
-                placeholder="Any specific requirements, features, or concerns we should know about?"
+                placeholder="Fonctionnalites, contraintes, questions ou besoins specifiques"
               />
             </Form.Group>
             
             <Form.Group className="mb-3">
-              <Form.Label>File Attachments</Form.Label>
+              <Form.Label>Fichiers joints</Form.Label>
               <Form.Control
                 type="file"
                 multiple
@@ -576,7 +576,7 @@ function ProjectInquiry() {
                 accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif"
               />
               <Form.Text className="text-muted">
-                Upload any relevant files (logos, documents, images, etc.)
+                Ajoutez si besoin vos logos, documents, captures ou inspirations.
               </Form.Text>
               {formData.files.length > 0 && (
                 <div className="uploaded-files mt-2">
@@ -600,30 +600,30 @@ function ProjectInquiry() {
             <Row>
               <Col md={6}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Preferred Communication</Form.Label>
+                  <Form.Label>Canal prefere</Form.Label>
                   <Form.Select
                     name="communicationPreference"
                     value={formData.communicationPreference}
                     onChange={handleInputChange}
                   >
-                    <option value="">Select preference</option>
+                    <option value="">Selectionnez un canal</option>
                     <option value="Email">Email</option>
-                    <option value="Phone">Phone calls</option>
-                    <option value="Video">Video calls</option>
-                    <option value="In-person">In-person meetings</option>
+                    <option value="Phone">Telephone</option>
+                    <option value="Video">Visio</option>
+                    <option value="In-person">Rendez-vous sur place</option>
                     <option value="Slack">Slack/Teams</option>
                   </Form.Select>
                 </Form.Group>
               </Col>
               <Col md={6}>
                 <Form.Group className="mb-3">
-                  <Form.Label>How did you hear about us?</Form.Label>
+                  <Form.Label>Comment m'avez-vous connu ?</Form.Label>
                   <Form.Control
                     type="text"
                     name="hearAboutUs"
                     value={formData.hearAboutUs}
                     onChange={handleInputChange}
-                    placeholder="Google, referral, social media, etc."
+                    placeholder="Google, recommandation, reseaux sociaux, etc."
                   />
                 </Form.Group>
               </Col>
@@ -643,14 +643,14 @@ function ProjectInquiry() {
         <Row>
           <Col md={12}>
             <h1 className="inquiry-heading">
-              Start Your <strong className="purple">Project</strong>
+              Parlons de votre <strong className="purple">projet</strong>
             </h1>
             <p className="inquiry-subtitle">
-              Let's bring your creative vision to life. Fill out our comprehensive brief to get started.
+              Partagez votre besoin, votre contexte et vos objectifs pour demarrer sur des bases claires.
             </p>
             {!isEmailJsConfigured && (
               <Alert variant="info" className="mt-3">
-                Email submission is not configured in this environment yet. Submitting this form will continue on WhatsApp instead.
+                L'envoi par email n'est pas encore configure ici. Le formulaire basculera vers WhatsApp pour finaliser votre demande.
               </Alert>
             )}
           </Col>
@@ -674,7 +674,7 @@ function ProjectInquiry() {
                 {/* Progress Bar */}
                 <div className="progress-section mb-4">
                   <div className="d-flex justify-content-between align-items-center mb-2">
-                    <span className="progress-text">Step {currentStep} of {totalSteps}</span>
+                    <span className="progress-text">Etape {currentStep} sur {totalSteps}</span>
                     <span className="progress-percentage">{Math.round(progressPercentage)}%</span>
                   </div>
                   <ProgressBar 
@@ -695,7 +695,7 @@ function ProjectInquiry() {
                         onClick={prevStep}
                         className="nav-btn prev-btn"
                       >
-                        <BsArrowLeft /> Previous
+                        <BsArrowLeft /> Precedent
                       </Button>
                     )}
                     
@@ -705,7 +705,7 @@ function ProjectInquiry() {
                         onClick={nextStep}
                         className="nav-btn next-btn ms-auto"
                       >
-                        Next <BsArrowRight />
+                        Suivant <BsArrowRight />
                       </Button>
                     ) : (
                       <Button 
@@ -714,7 +714,7 @@ function ProjectInquiry() {
                         className="nav-btn submit-btn ms-auto"
                         disabled={submitting}
                       >
-                        Submit Project Brief <FaCheckCircle />
+                        Envoyer la demande <FaCheckCircle />
                       </Button>
                     )}
                   </div>
@@ -728,8 +728,8 @@ function ProjectInquiry() {
         <Row className="contact-info-section">
           <Col md={12}>
             <div className="contact-info">
-              <h3>Need Help?</h3>
-              <p>Our team is here to assist you with your project inquiry.</p>
+              <h3>Besoin d'aide ?</h3>
+              <p>Vous pouvez aussi me contacter directement pour discuter de votre besoin.</p>
               <div className="contact-methods">
                 <div className="contact-method">
                   <FaEnvelope className="contact-icon" />

@@ -36,8 +36,8 @@ function BackToTop() {
           onClick={scrollToTop}
           style={{
             position: "fixed",
-            bottom: "30px",
-            right: "30px",
+            bottom: "24px",
+            left: "24px",
             zIndex: 1000,
             backgroundColor: "#c770f0",
             border: "none",
@@ -58,6 +58,8 @@ function BackToTop() {
             e.target.style.transform = "scale(1)";
             e.target.style.backgroundColor = "#c770f0";
           }}
+          aria-label="Retour en haut"
+          title="Retour en haut"
         >
           <FaArrowUp />
         </Button>
