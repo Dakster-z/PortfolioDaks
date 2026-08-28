@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
+import Particle from "../../shared/effects/Particle";
 import grilli from "../../Assets/Projects/grilli.png";
 import immersivest from "../../Assets/Projects/immersivest.png";
 import digitweb from "../../Assets/Projects/digitweb.png";
@@ -297,6 +298,7 @@ function Projects() {
   <React.Fragment>
       <SEO title="Projets – Portfolio" description="Selection de projets web et IA avec contexte, stack technique et approche produit." />
     <Container fluid id="etudes-de-cas" className="project-section">
+      <Particle />
       <Container>
         <h1 className="project-heading">
           Études de <strong className="purple">cas</strong>
@@ -324,7 +326,7 @@ function Projects() {
                   <li>Sous-titres et voix off</li>
                   <li>CTA unique : rendez-vous, devis, réservation ou DM</li>
                 </ul>
-                <a href="/ugc" className={styles.ugcProjectCta}>VOIR L’OFFRE UGC <span aria-hidden="true">→</span></a>
+                <a href="/#ugc" className={styles.ugcProjectCta}>VOIR LES EXEMPLES <span aria-hidden="true">→</span></a>
               </div>
             </div>
           </Col>

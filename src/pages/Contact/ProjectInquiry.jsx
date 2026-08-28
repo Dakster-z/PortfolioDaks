@@ -214,7 +214,7 @@ function ProjectInquiry() {
         }
         window.open(fallbackLink, "_blank", "noopener,noreferrer");
         setAlertType("success");
-        setAlertMessage("L'envoi par email n'est pas encore configure ici. Votre demande a ete redirigee vers WhatsApp.");
+        setAlertMessage("Besoin d'un échange rapide ? Le formulaire redirige vers WhatsApp pour finaliser votre demande.");
         setShowAlert(true);
         setTimeout(() => setShowAlert(false), 5000);
         return;
@@ -302,7 +302,7 @@ function ProjectInquiry() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+212 62000 1002"
                   />
                 </Form.Group>
               </Col>
@@ -650,7 +650,7 @@ function ProjectInquiry() {
             </p>
             {!isEmailJsConfigured && (
               <Alert variant="info" className="mt-3">
-                L'envoi par email n'est pas encore configure ici. Le formulaire basculera vers WhatsApp pour finaliser votre demande.
+                Besoin d'un échange rapide ? Le formulaire redirige vers WhatsApp pour finaliser votre demande.
               </Alert>
             )}
           </Col>
@@ -737,7 +737,7 @@ function ProjectInquiry() {
                 </div>
                 <div className="contact-method">
                   <FaPhone className="contact-icon" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+212 62000 1002</span>
                 </div>
               </div>
             </div>

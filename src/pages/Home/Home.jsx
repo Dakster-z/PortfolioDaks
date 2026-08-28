@@ -37,7 +37,7 @@ function Home() {
                   <Button as="a" href="https://wa.me/212620001002?text=Bonjour%20Digitalwebcraft%2C%20je%20souhaite%20discuter%20de%20mon%20projet." target="_blank" rel="noreferrer" className={styles.primaryCta}>
                     DISCUTER DE MON PROJET
                   </Button>
-                  <a href="/ugc#projets" className={styles.secondaryCta}>
+                  <a href="#etudes-de-cas" className={styles.secondaryCta}>
                     VOIR LES ÉTUDES DE CAS
                   </a>
                 </div>
@@ -77,6 +77,93 @@ function Home() {
       </Container>
 
       <Services />
+
+      <section id="ugc" className={styles.ugcSection}>
+        <Container>
+          <Row className="align-items-center g-5">
+            <Col lg={6}>
+              <p className={styles.eyebrow}>NOUVEAU · CONTENU DE CONVERSION</p>
+              <h2 className={styles.sectionTitle}>Votre site peut aussi devenir votre meilleur Reel.</h2>
+              <p className={styles.ugcText}>
+                Un prospect ne lit pas toujours toute votre page. Un Reel court peut montrer votre offre, vos services et votre parcours de prise de contact en quelques secondes — sans inventer de promesses ni reconstruire votre interface.
+              </p>
+              <ul className={styles.ugcList}>
+                <li>Script orienté action</li>
+                <li>Screenshots réels dans un mockup propre</li>
+                <li>Sous-titres et voix off</li>
+                <li>CTA unique : rendez-vous, devis, réservation ou DM</li>
+              </ul>
+              <a href="#etudes-de-cas" className={styles.secondaryCta}>VOIR LES EXEMPLES <span aria-hidden="true">→</span></a>
+            </Col>
+            <Col lg={6}>
+              <div className={styles.videoGrid}>
+                <div className={styles.videoCard}>
+                  <span className={styles.videoBadge}>NOUVEAU</span>
+                  <div className={styles.videoThumb}>
+                    <span>UGC</span>
+                  </div>
+                  <p>Votre page → un Reel prêt à publier</p>
+                </div>
+                <div className={styles.videoCard}>
+                  <span className={styles.videoBadge}>9:16</span>
+                  <div className={styles.videoThumbAlt}>
+                    <span>CTA</span>
+                  </div>
+                  <p>Une offre claire, un seul appel à l'action</p>
+                </div>
+                <div className={styles.videoCard}>
+                  <span className={styles.videoBadge}>FR · DARIJA · EN</span>
+                  <div className={styles.videoThumb}>
+                    <span>REEL</span>
+                  </div>
+                  <p>Voix off, sous-titres et format vertical</p>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section id="etudes-de-cas" className={styles.caseSection}>
+        <Container>
+          <p className={styles.eyebrow}>ÉTUDES DE CAS · DÉMONSTRATIONS</p>
+          <h2 className={styles.sectionTitle}>Des sites pensés pour être compris — et partagés.</h2>
+          <p className={styles.caseIntro}>
+            Voici des démonstrations de Reels créés à partir de pages web. Chaque vidéo utilise les éléments visibles du site concerné et est clairement identifiée comme étude de cas lorsque le projet est une démo.
+          </p>
+          <Row className="g-4 mt-2">
+            <Col md={4}>
+              <div className={styles.caseCard}>
+                <span className={styles.caseTag}>ÉTUDE DE CAS · CLINIQUE LASER</span>
+                <div className={styles.caseMedia}><span>01</span><small>laser_clinic_case_study_ugc_9x16.mp4</small></div>
+                <h3>Rassurer avant le premier rendez-vous</h3>
+                <p>Une vidéo courte qui met en avant les services, la prise de rendez-vous en ligne, les informations de présence et l'équipement validé par le brief.</p>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className={styles.caseCard}>
+                <span className={styles.caseTag}>ÉTUDE DE CAS · VOYAGE</span>
+                <div className={styles.caseMedia}><span>02</span><small>dak_travel_3d_ugc_9x16.mp4</small></div>
+                <h3>Passer de l'envie à la réservation</h3>
+                <p>Un format dynamique qui montre le moteur de recherche, les destinations et les formats de voyage à partir des vraies sections du site.</p>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className={styles.caseCard}>
+                <span className={styles.caseTag}>ÉTUDE DE CAS · CLINIQUE DENTAIRE</span>
+                <div className={styles.caseMedia}><span>03</span><small>dental_clinicv2_corrected_ugc_9x16.mp4</small></div>
+                <h3>Rendre le parcours patient plus évident</h3>
+                <p>Un montage qui guide visuellement du formulaire de rendez-vous aux services et à la présentation du cabinet, avec des captures réelles du projet.</p>
+              </div>
+            </Col>
+          </Row>
+          <div className={styles.caseCta}>
+            <h3>Votre site a déjà les éléments pour devenir un Reel utile.</h3>
+            <p>Envoyez-moi votre URL. Je vous indique quelle section peut devenir votre premier contenu de conversion.</p>
+            <a href="https://wa.me/212620001002?text=Bonjour%20Digitalwebcraft%2C%20je%20souhaite%20un%20audit%20de%20mon%20site." target="_blank" rel="noreferrer" className={styles.primaryCta}>DM AUDIT</a>
+          </div>
+        </Container>
+      </section>
 
       <section id="contact" className={styles.finalCtaSection}>
         <Container>

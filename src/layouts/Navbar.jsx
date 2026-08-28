@@ -5,19 +5,27 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logoo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import { CgGitFork } from "react-icons/cg";
 import {
+  AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
 
+import { CgFileDocument } from "react-icons/cg";
 import { BsSun, BsMoon } from "react-icons/bs";
 import { toggleTheme } from "../shared/ui/theme";
+import { env, whatsappLink } from "../shared/config/env";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
   const [theme, setTheme] = useState(document.documentElement.getAttribute('data-theme') || 'light');
+  const bookCallHref =
+    env.schedulerUrl || whatsappLink("Bonjour! Je souhaite reserver un appel.");
+  const bookCallExternal = /^https?:\/\//.test(bookCallHref);
+
   function scrollHandler() {
     if (window.scrollY >= 20) {
       updateNavbar(true);
@@ -84,6 +92,16 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/skills"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Compétences
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/project"
                 onClick={() => updateExpanded(false)}
               >
@@ -97,12 +115,6 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link as={Link} to="/#services" onClick={() => updateExpanded(false)}>
                 Services
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link as={Link} to="/ugc" onClick={() => updateExpanded(false)}>
-                UGC / Reels
               </Nav.Link>
             </Nav.Item>
 
@@ -138,6 +150,28 @@ function NavBar() {
               </Button>
             </Nav.Item>
 
+            <Nav.Item>
+              <Button
+                href={bookCallHref}
+                target={bookCallExternal ? "_blank" : undefined}
+                rel={bookCallExternal ? "noreferrer" : undefined}
+                className="ms-2"
+                variant="success"
+              >
+                Réserver un appel
+              </Button>
+            </Nav.Item>
+
+            <Nav.Item className="fork-btn">
+              <Button
+                href="https://github.com/Dakster-z"
+                target="_blank"
+                className="fork-btn-inner"
+              >
+                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
+                <AiFillStar style={{ fontSize: "1.1em" }} />
+              </Button>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

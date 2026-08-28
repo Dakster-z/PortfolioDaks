@@ -9,7 +9,7 @@ import "./CaseStudy.css";
 import styles from "./CaseStudy.module.css";
 
 function CaseStudy() {
-  const { id: projectId } = useParams();
+  const { projectId } = useParams();
   const navigate = useNavigate();
   const [showImageModal, setShowImageModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
