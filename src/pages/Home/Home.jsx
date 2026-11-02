@@ -21,17 +21,15 @@ function Home() {
             <Col md={7} className={styles.homeHeader} style={{ paddingRight: "30px", paddingLeft: "20px" }}>
               <div style={{ maxWidth: "100%", margin: "0 auto" }}>
                 <p className={styles.eyebrow} style={{ fontSize: "0.85rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "16px", fontWeight: 600 }}>
-                  DIGITALWEBCRAFT · WEB, IA & CONTENU DE CONVERSION
+                  DIGITALWEBCRAFT · INSTAGRAM, PUB & SITES WEB POUR PME
                 </p>
 
                 <h1 className={styles.heading} style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.15", marginBottom: "24px", fontWeight: 700 }}>
-                  Des sites web clairs, des automatisations utiles
-                  <br />
-                  et du contenu qui pousse vos prospects à agir.
+                  Plus de clients grâce à Instagram et à la pub
                 </h1>
 
                 <p className={styles.homeIntro}>
-                  J’aide les entreprises à mieux présenter leur offre, guider leurs demandes et gagner du temps grâce à des sites web sur mesure, des solutions IA ciblées et des Reels de conversion prêts à publier.
+                  Je gère votre Instagram et vos publicités pour attirer des prospects qualifiés, puis je transforme cette attention en demandes, rendez-vous et ventes. Sites web et chatbots IA pour les PME.
                 </p>
 
                 <div className={styles.ctaRow}>
@@ -44,34 +42,34 @@ function Home() {
                 </div>
 
                 <div className={styles.servicePills}>
-                  <span>Sites web sur mesure</span>
-                  <span>Automatisation business</span>
-                  <span>IA ciblée</span>
-                  <span>Reels FR / Darija / EN</span>
+                  <span>Gestion Instagram</span>
+                  <span>Publicités performance</span>
+                  <span>Sites web pour PME</span>
+                  <span>Chatbots IA</span>
                 </div>
 
                 <div className={styles.featureGrid}>
                   <div className={styles.featureCard}>
                     <span className="icon" style={{ fontSize: "2em" }}>💬</span>
-                    <h3>Proposition claire</h3>
-                    <p>Une offre intelligible, des CTA visibles et un message orienté vers l'action.</p>
+                    <h3>Des demandes qualifiées</h3>
+                    <p>Des messages et des publicités qui parlent aux bonnes personnes et déclenchent des prises de contact.</p>
                   </div>
                   <div className={styles.featureCard}>
                     <span className="icon" style={{ fontSize: "2em" }}>⚙️</span>
-                    <h3>Parcours fluide</h3>
-                    <p>Design utile, structure mobile-first et automatisations qui évitent les tâches répétitives.</p>
+                    <h3>Un parcours sans friction</h3>
+                    <p>Du premier clic à la prise de contact : un site clair, des appels à l'action visibles et des réponses rapides.</p>
                   </div>
                   <div className={styles.featureCard}>
                     <span className="icon" style={{ fontSize: "2em" }}>📈</span>
-                    <h3>Contenu de conversion</h3>
-                    <p>Reels, landing pages et messages à fort potentiel d'engagement pour mieux convertir.</p>
+                    <h3>Une réponse immédiate</h3>
+                    <p>Un chatbot IA accueille vos visiteurs, répond aux questions fréquentes et transmet les demandes.</p>
                   </div>
                 </div>
               </div>
             </Col>
 
             <Col md={5} className="text-center" style={{ paddingLeft: "30px", paddingRight: "20px", textAlign: "center" }}>
-              <img src={homeLogo} alt="Developpeur IA" className="img-fluid" style={{ maxHeight: "450px", width: "100%", height: "auto" }} />
+              <img src={homeLogo} alt="DIGITAL Webcraft — Instagram, publicité et sites web pour PME" className="img-fluid" style={{ maxHeight: "450px", width: "100%", height: "auto" }} />
             </Col>
           </Row>
         </Container>
@@ -83,8 +81,8 @@ function Home() {
         <Container>
           <div className={styles.finalCtaCard}>
             <p className={styles.eyebrow}>PRÊT À FAIRE MIEUX ?</p>
-            <h2>Votre site doit aider votre activité à vendre, pas seulement à exister.</h2>
-            <p>Je vous aide à clarifier votre proposition, améliorer votre présence digitale et mettre en place les automatismes utiles.</p>
+            <h2>Votre présence en ligne doit amener des clients, pas seulement exister.</h2>
+            <p>Je clarifie votre message, j'attire les bons prospects et je mets en place les outils qui transforment les demandes en rendez-vous.</p>
             <div className={styles.ctaRow}>
               <Button as="a" href={projectLink} target="_blank" rel="noreferrer" className={styles.primaryCta}>
                 DM AUDIT
