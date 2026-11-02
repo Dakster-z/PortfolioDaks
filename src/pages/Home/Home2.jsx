@@ -15,39 +15,18 @@ function Home2() {
       <Container>
         <Row>
           <Col md={8} className={styles.homeAboutDescription}>
-            <h1 style={{ fontSize: "2.6em" }}>
-              A <span className="purple"> PROPOS </span> DE MOI
-            </h1>
+            <h2 style={{ fontSize: "2.6em" }}>
+              À <span className="purple">PROPOS</span> DE MOI
+            </h2>
             <p className={styles.homeAboutBody}>
-Je ne me presente pas seulement comme un freelance.             <br />
-              <br />Je construis des experiences digitales qui aident les entreprises a mieux vendre, mieux expliquer leur offre et gagner du temps.
-              <i>
-                <b className="purple"> Mon approche melange design, performance et automatisation utile.  </b>
-              </i>
-              <br />
-              <br />
-              Mes domaines d'expertise couvrent la creation de &nbsp;
-              <i>
-                <b className="purple">sites vitrines, applications web, experiences utilisateur plus fluides et integrations IA concretes. </b> ainsi que
-                des sujets lies au{" "}
-                <b className="purple">
-                  cloud et a l'automatisation.
-                </b>
-              </i>
-              <br />
-              <br />
-            
-              Ma valeur ne se limite pas au code : elle se mesure a l'<b className="purple">impact</b>, a la clarte du message et a la qualite d'execution.
-              <i>
-                <b className="purple">
-                  {" "}
-                  Je livre, j'itere et j'ameliore chaque projet avec exigence.
-                </b>
-              </i>
-              <i>
-                <b className="purple"> Chaque projet doit etre utile, credible et orienté resultat.
-</b>
-              </i>
+              Je ne me présente pas seulement comme un freelance : je construis
+              des parcours qui transforment l'attention en demandes concrètes.
+              <br /><br />
+              J'accompagne les PME sur leur visibilité Instagram, leurs publicités,
+              leur site web et leurs chatbots IA, avec un objectif simple : plus de
+              prospects qualifiés et plus de rendez-vous.
+              <br /><br />
+              <i><b className="purple">Une approche orientée résultat : un message clair, des actions mesurables et des améliorations continues.</b></i>
             </p>
           </Col>
           <Col md={4} className={styles.myAvatar}>
@@ -58,7 +37,7 @@ Je ne me presente pas seulement comme un freelance.             <br />
         </Row>
         <Row>
           <Col md={12} className={styles.homeAboutSocial}>
-            <h1>RETROUVEZ-MOI</h1>
+            <h2>RETROUVEZ-MOI</h2>
             <p>
               N'hesitez pas a <span className="purple">me contacter </span>ou a suivre mon travail
             </p>

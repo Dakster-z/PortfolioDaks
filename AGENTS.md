@@ -4,22 +4,24 @@ React 17 portfolio for DIGITAL Webcraft (Zaid Dakir).
 
 ## Critical: Build tool
 
-**`react-scripts 5.0.0` hangs on Node 20** (webpack compilation never finishes). The project was migrated to Vite:
+Le projet utilise **Vite 8** (React 17). `react-scripts 5.0.0` reste présent pour les
+tests (`npm test`) mais ne doit **pas** servir au build : il bloque sur Node 20+.
 
-- Entry: `index.html` (root) → `src/index.jsx`
-- Config: `vite.config.js` (port 3000)
-- All JSX-containing files were renamed from `.js` to `.jsx`
-- `package.json` scripts still reference `react-scripts` — **do not use `npm start`**. Use:
-  - Dev: `npx vite`
-  - Build: `npx vite build`
-  - Preview: `npx vite preview`
+- Entrée : `index.html` (racine) → `src/index.jsx` ; config : `vite.config.js` (port 3000)
+- Les scripts `dev` / `start` / `build` / `preview` de `package.json` utilisent tous `vite`
+- Commandes : `npm ci`, `npm run build`, `npm run preview` (port 3000)
+- Variables client : préfixe `REACT_APP_`, injectées par `define` dans `vite.config.js`
+- SEO : le `<head>` de `index.html` contient les métadonnées statiques (canonical, OG,
+  Twitter) et un bloc de secours no-JS dans `#root`. `src/shared/seo/seoConfig.js`
+  doit rester **strictement aligné** sur le title et la description de ce `<head>`.
 
 ## Commands
 
 | Purpose | Command |
 |---------|---------|
-| Dev server (port 3000) | `npx vite --port 3000` |
-| Production build | `npx vite build` |
+| Dev server (port 3000) | `npm run dev` |
+| Production build | `npm run build` |
+| Preview du build | `npm run preview` |
 | Test | `npm test` (uses react-scripts test) |
 | Dep audit | `npm run deps:audit` |
 
@@ -58,5 +60,5 @@ See `.env.example` for full list (EmailJS, Analytics, API keys).
 
 - `src/components/Projects/Projects.js` is empty (0 bytes) — unused
 - `src/data/` directory exists but is empty
-- No CI/CD workflows configured. Deployed on Render (portfoliodaks.onrender.com)
+- No CI/CD workflows configured. Déployé sur Vercel (https://www.digitwebcraft.com/), branche de production `master`, build `npm run build` → `dist`, previews par branche.
 - Dependabot configured for weekly npm + Actions updates (skips major React updates)

@@ -77,7 +77,7 @@ function WhatsAppPopup() {
                   fontWeight: 600,
                 }}
               >
-                WhatsApp : +212 620 001 002
+                WhatsApp : {env.whatsappPhone}
               </a>
             ) : (
               <span
