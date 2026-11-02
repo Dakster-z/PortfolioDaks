@@ -5,6 +5,7 @@ import Home2 from "./Home2";
 import styles from "./Home.module.css";
 import Services from "../../components/Services/Services";
 import SEO from '../../shared/seo/SEO';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../shared/seo/seoConfig';
 import { whatsappLink } from '../../shared/config/env';
 
 function Home() {
@@ -12,7 +13,7 @@ function Home() {
 
   return (
     <section>
-      <SEO title="Portfolio developpement web et IA" description="Portfolio de projets web et IA, services digitaux et prise de contact." />
+      <SEO title={SITE_TITLE} description={SITE_DESCRIPTION} />
       <Container fluid className={styles.homeSection} id="home">
         <Particle />
         <Container className={`home-content ${styles.homeContent}`}>

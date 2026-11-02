@@ -1,17 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { SITE_TITLE, SITE_DESCRIPTION } from './seoConfig';
 
 /**
- * Simple SEO component.
- * Props:
- *   title – page title (appears in <title> and as Open Graph title)
- *   description – meta description and Open Graph description
+ * Métadonnées par page. Les valeurs par défaut sont celles de l'accueil et
+ * doivent rester alignées sur le <head> statique de index.html (SEO no-JS).
+ * Les autres pages passent leur propre title / description.
  */
-const SEO = ({ title, description }) => (
+const SEO = ({ title = SITE_TITLE, description = SITE_DESCRIPTION }) => (
   <Helmet>
     <title>{title}</title>
     <meta name="description" content={description} />
-    {/* Open Graph */}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
