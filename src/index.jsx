@@ -8,13 +8,18 @@ import { initTheme } from "./shared/ui/theme";
 
 initTheme();
 
+const rootElement = document.getElementById("root");
+// Retire le bloc de secours HTML (contenu lisible sans JavaScript) avant le montage.
+// Indispensable aussi si le projet migre un jour vers React 18 / createRoot.
+rootElement.replaceChildren();
+
 ReactDOM.render(
   <React.StrictMode>
     <HelmetProvider>
       <App />
     </HelmetProvider>
   </React.StrictMode>,
-  document.getElementById("root")
+  rootElement
 );
 
 // If you want to start measuring performance in your app, pass a function
