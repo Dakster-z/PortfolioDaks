@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio Website - v2.0<br/>
-  <a href="https://portfoliodaks.onrender.com/" target="_blank">Dakster.tech</a>
+  <a href="https://www.digitwebcraft.com/" target="_blank">DIGITAL Webcraft</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="./Images/readme-img1.png" />
@@ -50,6 +50,15 @@ This project was built using these technologies.
 
 **📱 Fully Responsive**
 
+## 🚀 Déploiement (Vercel)
+
+- Hébergement : **Vercel**, projet `portfolio-daks`
+- Branche de production : `master` → https://www.digitwebcraft.com/
+- Chaque autre branche génère une *Preview Deployment*
+- Build : `npm run build` (Vite), dossier de sortie : `dist`
+- Variables d'environnement (`REACT_APP_*`) : Vercel → Settings → Environment Variables
+- Test en local : `npm ci && npm run build && npm run preview` (http://localhost:3000)
+
 ## Getting Started
 
 Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
@@ -58,7 +67,7 @@ Clone down this repository. You will need `node.js` and `git` installed globally
 
 1. Installation: `npm install`
 
-2. In the project directory, you can run: `npm start`
+2. In the project directory, you can run: `npm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

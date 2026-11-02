@@ -57,11 +57,13 @@ PortfolioDaks/
 
 ## 🚀 Déploiement
 
-Ce projet peut être déployé sur :
-- **Netlify** (recommandé)
-- **Vercel** 
-- **GitHub Pages**
-- **Render** (l'URL mentionnée dans le README)
+Le site est déployé sur **Vercel** (projet `portfolio-daks`) :
+
+- Branche de production : `master` → https://www.digitwebcraft.com/
+- Build : `npm run build` (Vite), dossier de sortie `dist`
+- Les autres branches génèrent des *Preview Deployments*
+- Variables d'environnement (`REACT_APP_*`) : Vercel → Settings → Environment Variables
+- Test en local : `npm ci && npm run build && npm run preview`
 
 ## 📞 Support
 
