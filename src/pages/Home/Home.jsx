@@ -33,7 +33,7 @@ function Home() {
                 </p>
 
                 <div className={styles.ctaRow}>
-                  <Button as="a" href="https://wa.me/212620001002?text=Bonjour%20Digitalwebcraft%2C%20je%20souhaite%20discuter%20de%20mon%20projet." target="_blank" rel="noreferrer" className={styles.primaryCta}>
+                  <Button as="a" href={projectLink} target="_blank" rel="noreferrer" className={styles.primaryCta}>
                     DISCUTER DE MON PROJET
                   </Button>
                   <a href="/ugc#projets" className={styles.secondaryCta}>

@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Ugc.module.css';
+import { whatsappLink } from '../../shared/config/env';
 
-const whatsappAudit = 'https://wa.me/212620001002?text=Bonjour%2C%20je%20souhaite%20un%20audit%20de%20mon%20site.';
+const whatsappAudit = whatsappLink("Bonjour, je souhaite un audit de mon site.");
 
 const projects = [
   { tag: 'Etude de cas · clinique laser', title: 'Rassurer avant le rendez-vous', text: 'Services, prise de RDV, presence et equipement valide.', file: 'laser_clinic_case_study_ugc_9x16.mp4' },

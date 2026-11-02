@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Services.module.css';
+import { whatsappLink } from '../../shared/config/env';
 
 import portfolioImage from '../../Assets/Services/uiux-portfolio.png';
 import automationImage from '../../Assets/Services/automation-uiux.png';
@@ -14,7 +15,7 @@ const services = [
     description: "Landing pages et sites vitrines pensés pour rendre votre offre compréhensible et faciliter les demandes de devis, les rendez-vous et les commandes.",
     bullets: ['Landing pages et sites vitrines', "Parcours mobile et appels à l'action clairs", 'Demandes de devis et rendez-vous simplifiés'],
     cta: 'PARLER DE MON SITE',
-    href: 'https://wa.me/212620001002?text=Bonjour%20Digitalwebcraft%2C%20je%20souhaite%20discuter%20de%20mon%20site.',
+    href: whatsappLink("Bonjour Digitalwebcraft, je souhaite discuter de mon site."),
     external: true,
   },
   {
@@ -25,7 +26,7 @@ const services = [
     description: "Je gère vos publications et vos campagnes pour amener des personnes réellement intéressées, puis je suis les demandes jusqu'au rendez-vous.",
     bullets: ['Gestion et calendrier éditorial', 'Campagnes ciblées et suivi des demandes', "Messages qui donnent envie d'agir"],
     cta: 'PARLER DE MA VISIBILITÉ',
-    href: 'https://wa.me/212620001002?text=Bonjour%20Digitalwebcraft%2C%20je%20souhaite%20discuter%20d%27une%20solution%20IA%20ou%20d%27automatisation.',
+    href: whatsappLink("Bonjour Digitalwebcraft, je souhaite parler de ma visibilité."),
     external: true,
   },
   {
